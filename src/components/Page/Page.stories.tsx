@@ -1,6 +1,5 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 import { userEvent, within } from '@storybook/testing-library';
-import React from 'react';
 
 import { Page } from './Page';
 
