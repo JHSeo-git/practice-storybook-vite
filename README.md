@@ -2,27 +2,13 @@
 
 Practice for React + Vite + Storybook
 
-## vite + storybook init
+## style variants
 
-### 1. create vite app
+- [css](https://caniuse.com/)
+- [tailwindcss](https://tailwindcss.com/)
+- [styled-components](https://styled-components.com/)
+- [stitches](https://stitches.dev/)
 
-```bash
-yarn create vite
+## docs
 
-# [project-name]
-# - React
-# - TypeScript + SWC
-```
-
-### 2. install dependencies
-
-```bash
-cd [project-name]
-yarn install
-```
-
-### 3. init storybook
-
-```bash
-npx sb init --builder @storybook/builder-vite
-```
+- [Initialize](./__docs/initialize.md)
