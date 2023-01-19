@@ -1,4 +1,6 @@
-module.exports = {
+import type { StorybookViteConfig } from '@storybook/builder-vite';
+
+const config: StorybookViteConfig = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     '@storybook/addon-links',
@@ -14,4 +16,11 @@ module.exports = {
   features: {
     storyStoreV7: true,
   },
+  staticDirs: ['../public'],
+  async viteFinal(config, options) {
+    // Add your configuration here
+    return config;
+  },
 };
+
+export default config;

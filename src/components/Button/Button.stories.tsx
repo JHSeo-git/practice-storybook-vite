@@ -7,34 +7,38 @@ export default {
   title: 'Components/Button',
   component: Button,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
+  argTypes: {},
 } as ComponentMeta<typeof Button>;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
+export const Basic = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  primary: true,
+Basic.args = {
+  intent: 'primary',
+  size: 'medium',
   label: 'Button',
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
+Basic.argTypes = {
+  onClick: { action: 'clicked' },
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
+export function Intent() {
+  return (
+    <div className="flex gap-2">
+      <Button intent="primary" label="Primary" />
+      <Button intent="secondary" label="Secondary" />
+    </div>
+  );
+}
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
+export function Size() {
+  return (
+    <div className="flex gap-2">
+      <Button intent="primary" size="small" label="Small" />
+      <Button intent="primary" size="medium" label="Medium" />
+      <Button intent="primary" size="large" label="Large" />
+    </div>
+  );
+}

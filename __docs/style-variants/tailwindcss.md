@@ -1,0 +1,2 @@
+- https://storybook.js.org/recipes/tailwindcss
+- https://github.com/Integrayshaun/storybook-tailwind-recipe-example

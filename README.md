@@ -4,10 +4,10 @@ Practice for React + Vite + Storybook
 
 ## style variants
 
-- [css](https://caniuse.com/)
-- [tailwindcss](https://tailwindcss.com/)
-- [styled-components](https://styled-components.com/)
-- [stitches](https://stitches.dev/)
+- [ ] [tailwindcss](https://tailwindcss.com/)
+- [ ] [css](https://caniuse.com/)
+- [ ] [styled-components](https://styled-components.com/)
+- [ ] [stitches](https://stitches.dev/)
 
 ## docs
 
