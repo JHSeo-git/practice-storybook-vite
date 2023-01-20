@@ -1,0 +1,30 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.primaryDarkBorderHover = exports.primaryDarkBorder = exports.primaryDarkSmolidActive = exports.primaryDarkSmolidHover = exports.primaryDarkSmolid = exports.primaryDarkSolidActive = exports.primaryDarkSolidHover = exports.primaryDarkSolid = exports.primaryDarkHiContrast = exports.primaryDarkLoContrast = exports.hiContrastDark = exports.loContrastDark = exports.primaryBorderHover = exports.primaryBorder = exports.primarySmolidActive = exports.primarySmolidHover = exports.primarySmolid = exports.primarySolidActive = exports.primarySolidHover = exports.primarySolid = exports.primaryHiContrast = exports.primaryLoContrast = exports.hiContrast = exports.loContrast = void 0;
+const __1 = require("..");
+// light
+exports.loContrast = __1.$scale.color.white;
+exports.hiContrast = __1.$scale.color.gray12;
+exports.primaryLoContrast = __1.$scale.color.violet11;
+exports.primaryHiContrast = __1.$scale.color.violet12;
+exports.primarySolid = __1.$scale.color.violet9;
+exports.primarySolidHover = __1.$scale.color.violet10;
+exports.primarySolidActive = __1.$scale.color.violet10;
+exports.primarySmolid = __1.$scale.color.violet3;
+exports.primarySmolidHover = __1.$scale.color.violet4;
+exports.primarySmolidActive = __1.$scale.color.violet5;
+exports.primaryBorder = __1.$scale.color.violet7;
+exports.primaryBorderHover = __1.$scale.color.violet8;
+// dark
+exports.loContrastDark = __1.$scale.color.grayDark1;
+exports.hiContrastDark = __1.$scale.color.grayDark12;
+exports.primaryDarkLoContrast = __1.$scale.color.violetDark1;
+exports.primaryDarkHiContrast = __1.$scale.color.violetDark12;
+exports.primaryDarkSolid = __1.$scale.color.violetDark9;
+exports.primaryDarkSolidHover = __1.$scale.color.violetDark10;
+exports.primaryDarkSolidActive = __1.$scale.color.violetDark10;
+exports.primaryDarkSmolid = __1.$scale.color.violetDark3;
+exports.primaryDarkSmolidHover = __1.$scale.color.violetDark4;
+exports.primaryDarkSmolidActive = __1.$scale.color.violetDark5;
+exports.primaryDarkBorder = __1.$scale.color.violetDark7;
+exports.primaryDarkBorderHover = __1.$scale.color.violetDark8;
