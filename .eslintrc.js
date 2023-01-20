@@ -14,6 +14,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
+    'plugin:tailwindcss/recommended',
     'plugin:@typescript-eslint/recommended',
   ],
   overrides: [],
@@ -22,7 +23,14 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['json-format', 'prettier', 'react', 'simple-import-sort', '@typescript-eslint'],
+  plugins: [
+    'json-format',
+    'prettier',
+    'react',
+    'simple-import-sort',
+    'tailwindcss',
+    '@typescript-eslint',
+  ],
   rules: {
     'simple-import-sort/exports': 'error',
     'simple-import-sort/imports': 'error',
