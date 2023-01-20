@@ -1,6 +1,10 @@
 ## vite + storybook init
 
-### 1. create vite app
+storybook와 vite를 사용하기 위한 설정입니다.
+
+package manager로 `yarn`을 사용합니다.
+
+## 1. create vite app
 
 ```bash
 yarn create vite
@@ -10,14 +14,14 @@ yarn create vite
 # - TypeScript + SWC
 ```
 
-### 2. install dependencies
+## 2. install dependencies
 
 ```bash
 cd [project-name]
 yarn install
 ```
 
-### 3. init storybook
+## 3. init storybook
 
 ```bash
 npx sb init --builder @storybook/builder-vite

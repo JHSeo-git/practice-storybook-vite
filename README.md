@@ -2,13 +2,9 @@
 
 Practice for React + Vite + Storybook
 
-## style variants
-
-- [x] [tailwindcss](https://tailwindcss.com/)
-- [ ] [css](https://caniuse.com/)
-- [ ] [styled-components](https://styled-components.com/)
-- [ ] [stitches](https://stitches.dev/)
-
 ## docs
 
 - [Initialize](./__docs/initialize.md)
+- [Storybook style](./__docs/storybook-styles/tailwindcss.md)
+  - [TailwindCSS](./__docs/storybook-styles/tailwindcss.md)
+- [Reference](./__docs/reference.md)
