@@ -82,6 +82,7 @@ module.exports = {
         base: {
           lo: vars.$semantic.color.loContrast,
           hi: vars.$semantic.color.hiContrast,
+          weak: vars.$semantic.color.weakContrast,
         },
         canvas: {
           base: vars.$semantic.color.canvas,

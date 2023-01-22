@@ -4,6 +4,7 @@ import { $scale } from '..';
 
 export const loContrast = $scale.color.white;
 export const hiContrast = $scale.color.gray12;
+export const weakContrast = $scale.color.gray11;
 export const canvas = $scale.color.gray1;
 export const canvasSubtle = $scale.color.gray2;
 
@@ -44,6 +45,7 @@ export const warningForeground = $scale.color.black;
 
 export const loContrastDark = $scale.color.grayDark1;
 export const hiContrastDark = $scale.color.grayDark12;
+export const weakContrastDark = $scale.color.grayDark11;
 export const canvasDark = $scale.color.grayDark1;
 export const canvasSubtleDark = $scale.color.grayDark2;
 

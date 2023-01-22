@@ -1,10 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.warningDarkForeground = exports.warningDark = exports.infoDarkForeground = exports.infoDark = exports.successDarkForeground = exports.successDark = exports.dangerDarkForeground = exports.dangerDark = exports.primaryDark12 = exports.primaryDark11 = exports.primaryDark10 = exports.primaryDark9 = exports.primaryDark8 = exports.primaryDark7 = exports.primaryDark6 = exports.primaryDark5 = exports.primaryDark4 = exports.primaryDark3 = exports.primaryDark2 = exports.primaryDark1 = exports.canvasSubtleDark = exports.canvasDark = exports.hiContrastDark = exports.loContrastDark = exports.warningForeground = exports.warning = exports.infoForeground = exports.info = exports.successForeground = exports.success = exports.dangerForeground = exports.danger = exports.primary12 = exports.primary11 = exports.primary10 = exports.primary9 = exports.primary8 = exports.primary7 = exports.primary6 = exports.primary5 = exports.primary4 = exports.primary3 = exports.primary2 = exports.primary1 = exports.canvasSubtle = exports.canvas = exports.hiContrast = exports.loContrast = void 0;
+exports.warningDarkForeground = exports.warningDark = exports.infoDarkForeground = exports.infoDark = exports.successDarkForeground = exports.successDark = exports.dangerDarkForeground = exports.dangerDark = exports.primaryDark12 = exports.primaryDark11 = exports.primaryDark10 = exports.primaryDark9 = exports.primaryDark8 = exports.primaryDark7 = exports.primaryDark6 = exports.primaryDark5 = exports.primaryDark4 = exports.primaryDark3 = exports.primaryDark2 = exports.primaryDark1 = exports.canvasSubtleDark = exports.canvasDark = exports.weakContrastDark = exports.hiContrastDark = exports.loContrastDark = exports.warningForeground = exports.warning = exports.infoForeground = exports.info = exports.successForeground = exports.success = exports.dangerForeground = exports.danger = exports.primary12 = exports.primary11 = exports.primary10 = exports.primary9 = exports.primary8 = exports.primary7 = exports.primary6 = exports.primary5 = exports.primary4 = exports.primary3 = exports.primary2 = exports.primary1 = exports.canvasSubtle = exports.canvas = exports.weakContrast = exports.hiContrast = exports.loContrast = void 0;
 const __1 = require("..");
 // light
 exports.loContrast = __1.$scale.color.white;
 exports.hiContrast = __1.$scale.color.gray12;
+exports.weakContrast = __1.$scale.color.gray11;
 exports.canvas = __1.$scale.color.gray1;
 exports.canvasSubtle = __1.$scale.color.gray2;
 // light - primary
@@ -35,6 +36,7 @@ exports.warningForeground = __1.$scale.color.black;
 // dark
 exports.loContrastDark = __1.$scale.color.grayDark1;
 exports.hiContrastDark = __1.$scale.color.grayDark12;
+exports.weakContrastDark = __1.$scale.color.grayDark11;
 exports.canvasDark = __1.$scale.color.grayDark1;
 exports.canvasSubtleDark = __1.$scale.color.grayDark2;
 // dark - primary

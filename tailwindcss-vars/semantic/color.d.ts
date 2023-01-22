@@ -1,5 +1,6 @@
 export declare const loContrast = "#fff";
 export declare const hiContrast = "#171717";
+export declare const weakContrast = "#6f6f6f";
 export declare const canvas = "#fcfcfc";
 export declare const canvasSubtle = "#f8f8f8";
 export declare const primary1 = "#fdfcfe";
@@ -24,6 +25,7 @@ export declare const warning = "#f5d90a";
 export declare const warningForeground = "#000";
 export declare const loContrastDark = "#161616";
 export declare const hiContrastDark = "#ededed";
+export declare const weakContrastDark = "#a0a0a0";
 export declare const canvasDark = "#161616";
 export declare const canvasSubtleDark = "#1c1c1c";
 export declare const primaryDark1 = "#17151f";
