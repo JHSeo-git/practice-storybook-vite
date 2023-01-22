@@ -39,7 +39,7 @@ function ColorBlock({ color }: { color: string }) {
 
 function GrayScale() {
   return (
-    <>
+    <div className="mb-10">
       <Title>Gray</Title>
       <ScaleLabel length={Object.keys(colors.gray).length} hasEmptyHead />
       <ColorBlockWrapper>
@@ -54,13 +54,13 @@ function GrayScale() {
           <ColorBlock key={color} color={color} />
         ))}
       </ColorBlockWrapper>
-    </>
+    </div>
   );
 }
 
 function RedScale() {
   return (
-    <>
+    <div className="mb-10">
       <Title>Red</Title>
       <ScaleLabel length={Object.keys(colors.red).length} hasEmptyHead />
       <ColorBlockWrapper>
@@ -75,13 +75,13 @@ function RedScale() {
           <ColorBlock key={color} color={color} />
         ))}
       </ColorBlockWrapper>
-    </>
+    </div>
   );
 }
 
 function GreenScale() {
   return (
-    <>
+    <div className="mb-10">
       <Title>Green</Title>
       <ScaleLabel length={Object.keys(colors.green).length} hasEmptyHead />
       <ColorBlockWrapper>
@@ -96,13 +96,13 @@ function GreenScale() {
           <ColorBlock key={color} color={color} />
         ))}
       </ColorBlockWrapper>
-    </>
+    </div>
   );
 }
 
 function BlueScale() {
   return (
-    <>
+    <div className="mb-10">
       <Title>Blue</Title>
       <ScaleLabel length={Object.keys(colors.blue).length} hasEmptyHead />
       <ColorBlockWrapper>
@@ -117,13 +117,13 @@ function BlueScale() {
           <ColorBlock key={color} color={color} />
         ))}
       </ColorBlockWrapper>
-    </>
+    </div>
   );
 }
 
 function YellowScale() {
   return (
-    <>
+    <div className="mb-10">
       <Title>Yellow</Title>
       <ScaleLabel length={Object.keys(colors.yellow).length} hasEmptyHead />
       <ColorBlockWrapper>
@@ -138,13 +138,13 @@ function YellowScale() {
           <ColorBlock key={color} color={color} />
         ))}
       </ColorBlockWrapper>
-    </>
+    </div>
   );
 }
 
 function VioletScale() {
   return (
-    <>
+    <div className="mb-10">
       <Title>Violet</Title>
       <ScaleLabel length={Object.keys(colors.violet).length} hasEmptyHead />
       <ColorBlockWrapper>
@@ -159,7 +159,7 @@ function VioletScale() {
           <ColorBlock key={color} color={color} />
         ))}
       </ColorBlockWrapper>
-    </>
+    </div>
   );
 }
 
