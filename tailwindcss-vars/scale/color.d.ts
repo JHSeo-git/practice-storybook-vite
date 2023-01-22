@@ -1,3 +1,4 @@
+export declare const transparent = "transparent";
 export declare const black = "#000";
 export declare const white = "#fff";
 export declare const gray1 = "#fcfcfc";

@@ -1,5 +1,6 @@
 // https://www.radix-ui.com/docs/colors/palette-composition/the-scales
 
+export const transparent = 'transparent';
 export const black = '#000';
 export const white = '#fff';
 
