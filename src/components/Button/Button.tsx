@@ -107,7 +107,7 @@ const button = cva(
         true: ['rounded-full'],
       },
       disabled: {
-        true: ['opacity-50 pointer-events-none'],
+        true: ['opacity-50 pointer-events-none cursor-not-allowed'],
       },
       loading: {
         true: ['opacity-70 pointer-events-none'],

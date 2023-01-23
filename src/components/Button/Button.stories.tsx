@@ -49,10 +49,10 @@ export function All() {
           Outline
         </Button>
         <Button intent="primary" variant="ghost">
-          Outline
+          Ghost
         </Button>
         <Button intent="neutral" variant="ghost">
-          Outline
+          Ghost
         </Button>
       </div>
       <div className="flex flex-wrap gap-4 p-4">
@@ -75,10 +75,10 @@ export function All() {
           Outline
         </Button>
         <Button intent="primary" variant="ghost" rounded>
-          Outline
+          Ghost
         </Button>
         <Button intent="neutral" variant="ghost" rounded>
-          Outline
+          Ghost
         </Button>
       </div>
     </>
