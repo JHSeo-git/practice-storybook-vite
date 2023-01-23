@@ -1,6 +1,8 @@
 import { $scale } from '..';
 
+//
 // light
+//
 
 export const loContrast = $scale.color.white;
 export const hiContrast = $scale.color.gray12;
@@ -29,10 +31,12 @@ export const danger = $scale.color.red9;
 export const dangerForeground = $scale.color.red11;
 
 // light - success
+
 export const success = $scale.color.green9;
 export const successForeground = $scale.color.green11;
 
 // light - info
+
 export const info = $scale.color.blue9;
 export const infoForeground = $scale.color.blue11;
 
@@ -41,7 +45,9 @@ export const infoForeground = $scale.color.blue11;
 export const warning = $scale.color.yellow9;
 export const warningForeground = $scale.color.black;
 
+//
 // dark
+//
 
 export const loContrastDark = $scale.color.grayDark1;
 export const hiContrastDark = $scale.color.grayDark12;
@@ -70,10 +76,12 @@ export const dangerDark = $scale.color.redDark9;
 export const dangerDarkForeground = $scale.color.redDark11;
 
 // light - success
+
 export const successDark = $scale.color.greenDark9;
 export const successDarkForeground = $scale.color.greenDark11;
 
 // light - info
+
 export const infoDark = $scale.color.blueDark9;
 export const infoDarkForeground = $scale.color.blueDark11;
 

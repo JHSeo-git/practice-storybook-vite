@@ -4,7 +4,9 @@ export const transparent = 'transparent';
 export const black = '#000';
 export const white = '#fff';
 
+//
 // light
+//
 
 export const gray1 = '#fcfcfc';
 export const gray2 = '#f8f8f8';
@@ -84,7 +86,9 @@ export const violet10 = '#644fc1';
 export const violet11 = '#5746af';
 export const violet12 = '#20134b';
 
+//
 // dark
+//
 
 export const grayDark1 = '#161616';
 export const grayDark2 = '#1c1c1c';

@@ -1,3 +1,4 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
 const vars = require('./tailwindcss-vars');
 
 /** @type {import('tailwindcss').Config} */
@@ -9,6 +10,319 @@ module.exports = {
   darkMode: ['class'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: [vars.$semantic.typography.fontFamilySans, ...defaultTheme.fontFamily.sans],
+      },
+      fontSize: {
+        h1: [
+          vars.$semantic.typography.h1.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.h1.lineHeight,
+            fontWeight: vars.$semantic.typography.h1.fontWeight,
+          },
+        ],
+        h2: [
+          vars.$semantic.typography.h2.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.h2.lineHeight,
+            fontWeight: vars.$semantic.typography.h2.fontWeight,
+          },
+        ],
+        h3: [
+          vars.$semantic.typography.h3.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.h3.lineHeight,
+            fontWeight: vars.$semantic.typography.h3.fontWeight,
+          },
+        ],
+        h4: [
+          vars.$semantic.typography.h4.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.h4.lineHeight,
+            fontWeight: vars.$semantic.typography.h4.fontWeight,
+          },
+        ],
+        h5: [
+          vars.$semantic.typography.h5.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.h5.lineHeight,
+            fontWeight: vars.$semantic.typography.h5.fontWeight,
+          },
+        ],
+        h6: [
+          vars.$semantic.typography.h6.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.h6.lineHeight,
+            fontWeight: vars.$semantic.typography.h6.fontWeight,
+          },
+        ],
+        title1Bold: [
+          vars.$semantic.typography.title1Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.title1Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.title1Bold.fontWeight,
+          },
+        ],
+        title2Bold: [
+          vars.$semantic.typography.title2Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.title2Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.title2Bold.fontWeight,
+          },
+        ],
+        title3Bold: [
+          vars.$semantic.typography.title3Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.title3Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.title3Bold.fontWeight,
+          },
+        ],
+        title1Regular: [
+          vars.$semantic.typography.title1Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.title1Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.title1Regular.fontWeight,
+          },
+        ],
+        title2Regular: [
+          vars.$semantic.typography.title2Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.title2Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.title2Regular.fontWeight,
+          },
+        ],
+        title3Regular: [
+          vars.$semantic.typography.title3Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.title3Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.title3Regular.fontWeight,
+          },
+        ],
+        subtitle1Bold: [
+          vars.$semantic.typography.subtitle1Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.subtitle1Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.subtitle1Bold.fontWeight,
+          },
+        ],
+        subtitle2Bold: [
+          vars.$semantic.typography.subtitle2Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.subtitle2Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.subtitle2Bold.fontWeight,
+          },
+        ],
+        subtitle1Regular: [
+          vars.$semantic.typography.subtitle1Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.subtitle1Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.subtitle1Regular.fontWeight,
+          },
+        ],
+        subtitle2Regular: [
+          vars.$semantic.typography.subtitle2Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.subtitle2Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.subtitle2Regular.fontWeight,
+          },
+        ],
+        bodyRelaxed1Bold: [
+          vars.$semantic.typography.bodyRelaxed1Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.bodyRelaxed1Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.bodyRelaxed1Bold.fontWeight,
+          },
+        ],
+        bodyRelaxed2Bold: [
+          vars.$semantic.typography.bodyRelaxed2Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.bodyRelaxed2Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.bodyRelaxed2Bold.fontWeight,
+          },
+        ],
+        bodyNormal1Bold: [
+          vars.$semantic.typography.bodyNormal1Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.bodyNormal1Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.bodyNormal1Bold.fontWeight,
+          },
+        ],
+        bodyNormal2Bold: [
+          vars.$semantic.typography.bodyNormal2Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.bodyNormal2Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.bodyNormal2Bold.fontWeight,
+          },
+        ],
+        bodySnug1Bold: [
+          vars.$semantic.typography.bodySnug1Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.bodySnug1Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.bodySnug1Bold.fontWeight,
+          },
+        ],
+        bodySnug2Bold: [
+          vars.$semantic.typography.bodySnug2Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.bodySnug2Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.bodySnug2Bold.fontWeight,
+          },
+        ],
+        bodyRelaxed1Regular: [
+          vars.$semantic.typography.bodyRelaxed1Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.bodyRelaxed1Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.bodyRelaxed1Regular.fontWeight,
+          },
+        ],
+        bodyRelaxed2Regular: [
+          vars.$semantic.typography.bodyRelaxed2Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.bodyRelaxed2Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.bodyRelaxed2Regular.fontWeight,
+          },
+        ],
+        bodyNormal1Regular: [
+          vars.$semantic.typography.bodyNormal1Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.bodyNormal1Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.bodyNormal1Regular.fontWeight,
+          },
+        ],
+        bodyNormal2Regular: [
+          vars.$semantic.typography.bodyNormal2Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.bodyNormal2Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.bodyNormal2Regular.fontWeight,
+          },
+        ],
+        bodySnug1Regular: [
+          vars.$semantic.typography.bodySnug1Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.bodySnug1Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.bodySnug1Regular.fontWeight,
+          },
+        ],
+        bodySnug2Regular: [
+          vars.$semantic.typography.bodySnug2Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.bodySnug2Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.bodySnug2Regular.fontWeight,
+          },
+        ],
+        caption1Bold: [
+          vars.$semantic.typography.caption1Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.caption1Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.caption1Bold.fontWeight,
+          },
+        ],
+        caption2Bold: [
+          vars.$semantic.typography.caption2Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.caption2Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.caption2Bold.fontWeight,
+          },
+        ],
+        caption1Regular: [
+          vars.$semantic.typography.caption1Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.caption1Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.caption1Regular.fontWeight,
+          },
+        ],
+        caption2Regular: [
+          vars.$semantic.typography.caption2Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.caption2Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.caption2Regular.fontWeight,
+          },
+        ],
+        label1Bold: [
+          vars.$semantic.typography.label1Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.label1Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.label1Bold.fontWeight,
+          },
+        ],
+        label2Bold: [
+          vars.$semantic.typography.label2Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.label2Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.label2Bold.fontWeight,
+          },
+        ],
+        label3Bold: [
+          vars.$semantic.typography.label3Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.label3Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.label3Bold.fontWeight,
+          },
+        ],
+        label4Bold: [
+          vars.$semantic.typography.label4Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.label4Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.label4Bold.fontWeight,
+          },
+        ],
+        label5Bold: [
+          vars.$semantic.typography.label5Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.label5Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.label5Bold.fontWeight,
+          },
+        ],
+        label6Bold: [
+          vars.$semantic.typography.label6Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.label6Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.label6Bold.fontWeight,
+          },
+        ],
+        label1Regular: [
+          vars.$semantic.typography.label1Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.label1Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.label1Regular.fontWeight,
+          },
+        ],
+        label2Regular: [
+          vars.$semantic.typography.label2Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.label2Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.label2Regular.fontWeight,
+          },
+        ],
+        label3Regular: [
+          vars.$semantic.typography.label3Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.label3Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.label3Regular.fontWeight,
+          },
+        ],
+        label4Regular: [
+          vars.$semantic.typography.label4Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.label4Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.label4Regular.fontWeight,
+          },
+        ],
+        label5Regular: [
+          vars.$semantic.typography.label5Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.label5Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.label5Regular.fontWeight,
+          },
+        ],
+        label6Regular: [
+          vars.$semantic.typography.label6Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.label6Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.label6Regular.fontWeight,
+          },
+        ],
+      },
       colors: {
         base: {
           lo: vars.$semantic.color.loContrast,

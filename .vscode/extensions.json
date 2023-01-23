@@ -2,7 +2,7 @@
   "recommendations": [
     "bradlc.vscode-tailwindcss",
     "esbenp.prettier-vscode",
-    "styled-components.vscode-styled-components",
-    "unifiedjs.vscode-mdx"
+    "unifiedjs.vscode-mdx",
+    "wayou.vscode-todo-highlight"
   ]
 }

@@ -1,4 +1,5 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
+import { CheckCircle, Download, Heart, Link } from 'lucide-react';
 
 import { Button } from './Button';
 
@@ -204,6 +205,61 @@ export function Size() {
   );
 }
 
+export function ContainsSVG() {
+  return (
+    <>
+      <div className="mb-5 flex items-start gap-2">
+        <Button intent="primary" size="small">
+          <Heart className="h-4 w-4" />
+          <span>좋아요</span>
+        </Button>
+        <Button intent="primary" size="small">
+          <span>다운로드</span>
+          <Download className="h-4 w-4" />
+        </Button>
+      </div>
+      <div className="mb-5 flex items-start gap-2">
+        <Button intent="primary" size="medium">
+          <Heart className="h-5 w-5" />
+          <span>좋아요</span>
+        </Button>
+        <Button intent="primary" size="medium">
+          <span>다운로드</span>
+          <Download className="h-5 w-5" />
+        </Button>
+      </div>
+      <div className="mb-5 flex items-start gap-2">
+        <Button intent="primary" size="large">
+          <Heart className="h-6 w-6" />
+          <span>좋아요</span>
+        </Button>
+        <Button intent="primary" size="large">
+          <span>다운로드</span>
+          <Download className="h-6 w-6" />
+        </Button>
+      </div>
+    </>
+  );
+}
+
+export function ContainsIcon() {
+  return (
+    <>
+      <div className="flex items-start gap-2">
+        <Button variant="outline" circle size="small">
+          <Link className="h-4 w-4" />
+        </Button>
+        <Button variant="outline" circle size="medium">
+          <Link className="h-5 w-5" />
+        </Button>
+        <Button variant="outline" circle size="large">
+          <Link className="h-6 w-6" />
+        </Button>
+      </div>
+    </>
+  );
+}
+
 export function Rounded() {
   return (
     <div className="flex items-start gap-2">
@@ -270,5 +326,29 @@ export function Disabled() {
         Warning
       </Button>
     </div>
+  );
+}
+
+export function ExtendsStyles() {
+  return (
+    <>
+      <div className="mb-5 flex w-full gap-2">
+        <Button className="w-full justify-between" intent="info" size="large" rounded>
+          <span>Custom Class 1</span>
+          <span className="flex items-center gap-2">
+            <CheckCircle />
+          </span>
+        </Button>
+      </div>
+      <div className="mb-5 flex w-full gap-2">
+        <Button
+          className="hover:-translate-y-1 hover:shadow-md active:translate-y-0 active:hover:shadow-sm"
+          intent="neutral"
+          variant="outline"
+        >
+          Custom Class 2
+        </Button>
+      </div>
+    </>
   );
 }

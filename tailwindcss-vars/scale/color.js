@@ -7,7 +7,9 @@ exports.violetDark12 = exports.violetDark11 = exports.violetDark10 = exports.vio
 exports.transparent = 'transparent';
 exports.black = '#000';
 exports.white = '#fff';
+//
 // light
+//
 exports.gray1 = '#fcfcfc';
 exports.gray2 = '#f8f8f8';
 exports.gray3 = '#f3f3f3';
@@ -80,7 +82,9 @@ exports.violet9 = '#6e56cf';
 exports.violet10 = '#644fc1';
 exports.violet11 = '#5746af';
 exports.violet12 = '#20134b';
+//
 // dark
+//
 exports.grayDark1 = '#161616';
 exports.grayDark2 = '#1c1c1c';
 exports.grayDark3 = '#232323';
