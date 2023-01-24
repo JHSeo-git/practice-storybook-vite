@@ -19,10 +19,6 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
    */
   icon?: React.ReactNode;
   /**
-   * The starting type of the input (example: 'password')
-   */
-  startingType?: string;
-  /**
    * The starting focused state of the input
    */
   startFocused?: boolean;
@@ -34,13 +30,78 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
    * Is disabled?
    */
   disabled?: boolean;
+}
+
+/**
+ * The Input component is a wrapper around the native input element.
+ */
+export const Input = forwardRef<HTMLInputElement, InputProps>(
+  (
+    {
+      //
+      id,
+      type: startingType,
+      startFocused,
+      ...props
+    },
+    forwardedRef
+  ) => {
+    const [type, setType] = useState(startingType);
+    const togglePasswordType = useCallback(
+      (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (type === 'password') {
+          setType('text');
+          return;
+        }
+        setType('password');
+      },
+      [type, setType]
+    );
+
+    const localRef = useRef<HTMLInputElement>(null);
+    const didFocusOnStart = useRef(false);
+
+    const inputId = id || `input_${useId()}`;
+
+    useEffect(() => {
+      if (localRef.current && startFocused && !didFocusOnStart.current) {
+        localRef.current.focus();
+        didFocusOnStart.current = true;
+      }
+    }, [localRef, didFocusOnStart]);
+
+    return (
+      <PureInput
+        ref={mergeRefs([forwardedRef, localRef])}
+        id={inputId}
+        type={type}
+        startingType={startingType}
+        onActionClick={togglePasswordType}
+        {...props}
+      />
+    );
+  }
+);
+
+Input.displayName = 'Input';
+
+interface PureInputProps extends InputProps {
+  /**
+   * The starting type of the input (example: 'password')
+   */
+  startingType?: string;
   /**
    * Optional click handler for right-side action
    */
   onActionClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-export const PureInput = forwardRef<HTMLInputElement, InputProps>(
+/**
+ * A pure input component that can be used in other components
+ */
+export const PureInput = forwardRef<HTMLInputElement, PureInputProps>(
   (
     {
       id,
@@ -133,61 +194,3 @@ const pureInput = cva(
     },
   }
 );
-
-/**
- * The Input component is a wrapper around the native input element.
- */
-export const Input = forwardRef<
-  HTMLInputElement,
-  Omit<React.ComponentProps<typeof PureInput>, 'startingType' | 'onActionClick'>
->(
-  (
-    {
-      //
-      id,
-      type: startingType,
-      startFocused,
-      ...props
-    },
-    forwardedRef
-  ) => {
-    const [type, setType] = useState(startingType);
-    const togglePasswordType = useCallback(
-      (e: React.MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault();
-        e.stopPropagation();
-        if (type === 'password') {
-          setType('text');
-          return;
-        }
-        setType('password');
-      },
-      [type, setType]
-    );
-
-    const localRef = useRef<HTMLInputElement>(null);
-    const didFocusOnStart = useRef(false);
-
-    const inputId = id || `input_${useId()}`;
-
-    useEffect(() => {
-      if (localRef.current && startFocused && !didFocusOnStart.current) {
-        localRef.current.focus();
-        didFocusOnStart.current = true;
-      }
-    }, [localRef, didFocusOnStart]);
-
-    return (
-      <PureInput
-        ref={mergeRefs([forwardedRef, localRef])}
-        id={inputId}
-        type={type}
-        startingType={startingType}
-        onActionClick={togglePasswordType}
-        {...props}
-      />
-    );
-  }
-);
-
-Input.displayName = 'Input';
