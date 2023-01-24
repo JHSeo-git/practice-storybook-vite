@@ -18,7 +18,6 @@
     "vite:preview": "vite preview"
   },
   "dependencies": {
-    "lucide-react": "^0.105.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -50,9 +49,11 @@
     "eslint-plugin-react": "^7.32.1",
     "eslint-plugin-simple-import-sort": "^9.0.0",
     "eslint-plugin-tailwindcss": "^3.8.0",
+    "lucide-react": "^0.105.0",
     "nodemon": "^2.0.20",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
+    "react-merge-refs": "^2.0.1",
     "serve": "^14.1.2",
     "storybook-dark-mode": "^2.0.5",
     "tailwind-merge": "^1.8.1",

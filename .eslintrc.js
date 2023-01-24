@@ -34,6 +34,7 @@ module.exports = {
   rules: {
     'simple-import-sort/exports': 'error',
     'simple-import-sort/imports': 'error',
+    'tailwindcss/no-custom-classname': 'off',
     '@typescript-eslint/consistent-type-imports': [
       'error',
       {

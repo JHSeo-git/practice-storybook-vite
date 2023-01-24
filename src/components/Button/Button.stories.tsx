@@ -3,28 +3,19 @@ import { CheckCircle, Download, Heart, Link } from 'lucide-react';
 
 import { Button } from './Button';
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Components/Button',
   component: Button,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {},
 } as ComponentMeta<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
-
-export const Basic = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Basic.args = {
+export const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+Template.args = {
   intent: 'neutral',
   variant: 'solid',
   size: 'medium',
   children: 'Label',
 };
-
-Basic.argTypes = {
-  onClick: { action: 'clicked' },
-};
+Template.storyName = 'Basic';
 
 export function All() {
   return (
