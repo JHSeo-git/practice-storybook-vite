@@ -1,4 +1,5 @@
 import type { StorybookViteConfig } from '@storybook/builder-vite';
+import { mergeConfig } from 'vite';
 
 const config: StorybookViteConfig = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -13,14 +14,19 @@ const config: StorybookViteConfig = {
   framework: '@storybook/react',
   core: {
     builder: '@storybook/builder-vite',
+    disableTelemetry: true,
   },
   features: {
     storyStoreV7: true,
   },
   staticDirs: ['../public'],
-  async viteFinal(config, options) {
+  async viteFinal(config) {
     // Add your configuration here
-    return config;
+    return mergeConfig(config, {
+      optimizeDeps: {
+        include: ['storybook-dark-mode'],
+      },
+    });
   },
 };
 

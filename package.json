@@ -5,7 +5,7 @@
   "scripts": {
     "build": "concurrently \"yarn:build:*\"",
     "build:storybook": "build-storybook",
-    "build:tw": "builz:vars && tailwindcss -i ./src/styles/tailwind.css -o ./public/tailwind.css",
+    "build:tw": "yarn builz:vars && tailwindcss -i ./src/styles/tailwind.css -o ./public/tailwind.css",
     "builz:vars": "tsc -p tsconfig.vars.json",
     "dev": "concurrently \"yarn:dev:*\"",
     "dev:storybook": "start-storybook -p 6006",
