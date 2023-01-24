@@ -114,14 +114,19 @@ import StackAlt from '../assets/stackalt.svg';
   `}
 </style>
 
-# Welcome to Storybook
+# Practice Storybook
 
-Storybook helps you build UI components in isolation from your app's business logic, data, and context.
-That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during development, testing, or QA.
+> with tailwindcss, Vite, TypeScript
 
-Browse example stories now by navigating to them in the sidebar.
-View their code in the `stories` directory to learn how they work.
-We recommend building UIs with a [**component-driven**](https://componentdriven.org) process starting with atomic components and ending with pages.
+스토리북과 tailwindcss, Vite, TypeScript를 함께 적용한 데모 프로젝트입니다.
+
+스토리북은 비지니스 로직, 데이터, 컨텍스트에서 독립된 상태에서 쉽게 UI 컴포넌트를 만들 수 있습니다.
+개발하는 동안 **stories**에 이러한 UI 상태를 저장하여 개발, 테스트 또는 QA 중에 사용할 수 있습니다.
+
+왼쪽 메뉴에서 예제 스토리를 탐색하고 작동방식을 확인해보세요.
+
+> **Note**  
+> atomic 컴포넌트로 시작하여 pages로 끝나는 일련의 프로세스인 <a href="https://componentdriven.org" target="_blank"><strong>component-driven</strong></a> 프로세스로 UI를 구축하는 것을 추천합니다.
 
 <div className="subheading">Configure</div>
 
@@ -133,19 +138,15 @@ We recommend building UIs with a [**component-driven**](https://componentdriven.
   >
     <img src={Plugin} alt="plugin" />
     <span>
-      <strong>Presets for popular tools</strong>
-      Easy setup for TypeScript, SCSS and more.
+      <strong>인기있는 Presets</strong>
+      TypeScript를 설치하거나 SCSS 등을 손쉽게 적용하세요.
     </span>
   </a>
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/configure/webpack"
-    target="_blank"
-  >
+  <a className="link-item" href="https://storybook.js.org/docs/react/builders/vite" target="_blank">
     <img src={StackAlt} alt="Build" />
     <span>
-      <strong>Build configuration</strong>
-      How to customize webpack and Babel
+      <strong>빌드 설정</strong>
+      Vite 설정을 커스텀하고 Storybook을 빌드하세요.
     </span>
   </a>
   <a
@@ -155,8 +156,8 @@ We recommend building UIs with a [**component-driven**](https://componentdriven.
   >
     <img src={Colors} alt="colors" />
     <span>
-      <strong>Styling</strong>
-      How to load and configure CSS libraries
+      <strong>스타일링</strong>
+      CSS 라비르러리를 로드하고 구성하는 방법
     </span>
   </a>
   <a
@@ -166,8 +167,8 @@ We recommend building UIs with a [**component-driven**](https://componentdriven.
   >
     <img src={Flow} alt="flow" />
     <span>
-      <strong>Data</strong>
-      Providers and mocking for data libraries
+      <strong>데이터</strong>
+      데이터 라이브러리를 위한 프로바이더와 mocking
     </span>
   </a>
 </div>
@@ -178,33 +179,33 @@ We recommend building UIs with a [**component-driven**](https://componentdriven.
   <a className="link-item" href="https://storybook.js.org/docs" target="_blank">
     <img src={Repo} alt="repo" />
     <span>
-      <strong>Storybook documentation</strong>
-      Configure, customize, and extend
+      <strong>스토리북 문서</strong>
+      설정, 커스터마이징, 확장 등
     </span>
   </a>
   <a className="link-item" href="https://storybook.js.org/tutorials/" target="_blank">
     <img src={Direction} alt="direction" />
     <span>
-      <strong>In-depth guides</strong>
-      Best practices from leading teams
+      <strong>더 자세한 가이드</strong>
+      다른 팀들의 Best Practices
     </span>
   </a>
   <a className="link-item" href="https://github.com/storybookjs/storybook" target="_blank">
     <img src={Code} alt="code" />
     <span>
-      <strong>GitHub project</strong>
-      View the source and add issues
+      <strong>GitHub 프로젝트</strong>
+      소스를 확인하고 이슈를 추가하세요.
     </span>
   </a>
   <a className="link-item" href="https://discord.gg/storybook" target="_blank">
     <img src={Comments} alt="comments" />
     <span>
-      <strong>Discord chat</strong>
-      Chat with maintainers and the community
+      <strong>디스코드</strong>
+      메인테이너, 커뮤니티와 함께 대화하세요.
     </span>
   </a>
 </div>
 
 <div className="tip-wrapper">
-  <span className="tip">Tip</span>Edit the Markdown in <code>stories/Introduction.stories.mdx</code>
+  <span className="tip">팁</span>마크다운을 수정하세요 <code>stories/Introduction.stories.mdx</code>
 </div>

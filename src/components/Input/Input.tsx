@@ -23,6 +23,10 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
    */
   startFocused?: boolean;
   /**
+   * full width?
+   */
+  fullWidth?: boolean;
+  /**
    * The error message of the input
    */
   error?: string;
@@ -30,6 +34,14 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
    * Is disabled?
    */
   disabled?: boolean;
+  /**
+   * label class?
+   */
+  labelClassName?: string;
+  /**
+   * box class?
+   */
+  boxClassName?: string;
 }
 
 /**
@@ -109,8 +121,11 @@ export const PureInput = forwardRef<HTMLInputElement, PureInputProps>(
       orientation = 'vertical',
       icon = null,
       startingType = 'text',
-      onActionClick,
+      fullWidth,
       error,
+      onActionClick,
+      boxClassName,
+      labelClassName,
       type,
       className,
       ...props
@@ -124,14 +139,19 @@ export const PureInput = forwardRef<HTMLInputElement, PureInputProps>(
         className={cn(
           'relative',
           orientation === 'horizontal' && 'flex items-center gap-4',
-          className
+          fullWidth && 'w-full',
+          boxClassName
         )}
       >
         {label && (
-          <div className="py-1.5">
+          <div className="flex items-center py-1.5">
             <label
               htmlFor={id}
-              className={cn('text-label4Regular text-base-hi', isError && 'text-danger-base')}
+              className={cn(
+                'text-label4Regular text-base-hi',
+                isError && 'text-danger-base',
+                labelClassName
+              )}
             >
               {label}
             </label>
@@ -149,11 +169,14 @@ export const PureInput = forwardRef<HTMLInputElement, PureInputProps>(
             ref={forwardedRef}
             id={id}
             type={type}
-            className={pureInput({
-              leftIcon: Boolean(icon),
-              rightIcon: startingType === 'password',
-              error: isError,
-            })}
+            className={cn(
+              pureInput({
+                leftIcon: Boolean(icon),
+                rightIcon: startingType === 'password',
+                error: isError,
+              }),
+              className
+            )}
             {...props}
           />
 

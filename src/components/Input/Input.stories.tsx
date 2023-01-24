@@ -74,13 +74,8 @@ export function Orientation() {
 export function Icon() {
   return (
     <div className="space-y-4">
-      <Input placeholder="search" icon={<Search className="h-4 w-4" />} className="w-full" />
-      <Input
-        placeholder="disabled"
-        icon={<Search className="h-4 w-4" />}
-        className="w-full"
-        disabled
-      />
+      <Input placeholder="search" icon={<Search className="h-4 w-4" />} fullWidth />
+      <Input placeholder="disabled" icon={<Search className="h-4 w-4" />} fullWidth disabled />
     </div>
   );
 }
@@ -92,6 +87,15 @@ export function Focused() {
       <Input label="Label" placeholder="text" />
       <Input label="Start Focused" placeholder="text" startFocused />
       <Input label="Label" placeholder="text" />
+    </div>
+  );
+}
+
+export function FullWidth() {
+  return (
+    <div className="space-y-4">
+      <Input placeholder="full width with no label" fullWidth />
+      <Input label="Label" placeholder="full width with label" fullWidth />
     </div>
   );
 }
@@ -140,5 +144,31 @@ export function Disabled() {
         defaultValue="password"
       />
     </div>
+  );
+}
+
+export function ExtendsStyles() {
+  return (
+    <>
+      <div className="mb-10">
+        <Input label="Contrast" placeholder="text" className="bg-base-hi text-base-lo" />
+      </div>
+      <div className="mb-10">
+        <Input
+          label="Underline"
+          placeholder="text"
+          className="border-b-base-weak rounded-none border-x-0 border-t-0 border-b-2"
+        />
+      </div>
+      <div className="mb-10">
+        <Input
+          orientation="horizontal"
+          label="Smaller"
+          placeholder="text"
+          className="text-label6Regular p-1"
+          labelClassName="text-label6Regular"
+        />
+      </div>
+    </>
   );
 }
