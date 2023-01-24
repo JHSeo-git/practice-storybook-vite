@@ -186,7 +186,17 @@ export const PureInput = forwardRef<HTMLInputElement, PureInputProps>(
               className={cn('text-base-weak absolute right-3.5', isError && 'text-danger-base')}
               onClick={onActionClick}
             >
-              {type === 'password' ? <Eye className="h-4 w-4" /> : <EyeOff className="h-4 w-4" />}
+              {type === 'password' ? (
+                <>
+                  <Eye className="h-4 w-4" />
+                  <span className="sr-only">Show</span>
+                </>
+              ) : (
+                <>
+                  <EyeOff className="h-4 w-4" />
+                  <span className="sr-only">Hide</span>
+                </>
+              )}
             </button>
           )}
         </div>
