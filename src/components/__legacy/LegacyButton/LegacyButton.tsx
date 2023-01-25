@@ -1,9 +1,9 @@
 import { cva } from 'class-variance-authority';
 import { forwardRef } from 'react';
 
-import { cn } from '../../lib/utils/styleUtils';
+import { cn } from '@/lib/utils/styleUtils';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface LegacyButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /**
    * Is this the principal call to action on the page?
    */
@@ -41,7 +41,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 /**
  * Primary UI component for user interaction
  */
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const LegacyButton = forwardRef<HTMLButtonElement, LegacyButtonProps>(
   (
     {
       intent = 'neutral',
@@ -75,7 +75,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   }
 );
 
-Button.displayName = 'Button';
+LegacyButton.displayName = 'LegacyButton';
 
 const button = cva(
   ['font-semibold rounded inline-flex gap-2 items-center justify-center transition'],

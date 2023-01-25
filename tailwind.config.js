@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+const { fontFamily } = require('tailwindcss/defaultTheme');
 const vars = require('./tailwindcss-vars');
 
 /** @type {import('tailwindcss').Config} */
@@ -11,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: [vars.$semantic.typography.fontFamilySans, ...defaultTheme.fontFamily.sans],
+        sans: [vars.$semantic.typography.fontFamilySans, ...fontFamily.sans],
       },
       fontSize: {
         h1: [
@@ -428,5 +428,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-animate')],
 };

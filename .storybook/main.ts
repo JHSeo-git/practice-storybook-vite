@@ -1,4 +1,5 @@
 import type { StorybookViteConfig } from '@storybook/builder-vite';
+import tsconfigPaths from 'vite-tsconfig-paths';
 import { mergeConfig } from 'vite';
 
 const config: StorybookViteConfig = {
@@ -20,9 +21,16 @@ const config: StorybookViteConfig = {
     storyStoreV7: true,
   },
   staticDirs: ['../public'],
+  /**
+   * A option exposed by storybook-builder-vite for customising the Vite config.
+   * @see https://github.com/eirslett/storybook-builder-vite#customize-vite-config
+   * @param {import("vite").UserConfig} config
+   * @see https://vitejs.dev/config/
+   */
   async viteFinal(config) {
     // Add your configuration here
     return mergeConfig(config, {
+      plugins: [tsconfigPaths()],
       optimizeDeps: {
         include: ['storybook-dark-mode'],
       },
