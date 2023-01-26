@@ -4,11 +4,11 @@ import { cn } from '@/lib/utils/styleUtils';
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   /**
-   * className of the input
+   * className of the `<input>`
    */
   className?: string;
   /**
-   * disabled of the input
+   * disabled of the `<input>`
    */
   disabled?: boolean;
 }

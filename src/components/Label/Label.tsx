@@ -9,11 +9,11 @@ interface LabelProps extends RadixLabel.PrimitiveLabelProps {
    */
   htmlFor?: string;
   /**
-   * className of the label
+   * className of the `<label>`
    */
   className?: string;
   /**
-   * children of the label
+   * children of the `<label>`
    */
   children?: React.ReactNode;
 }

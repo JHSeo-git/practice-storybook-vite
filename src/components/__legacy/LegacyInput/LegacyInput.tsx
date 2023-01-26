@@ -201,7 +201,7 @@ export const PureInput = forwardRef<HTMLInputElement, PureInputProps>(
           )}
         </div>
 
-        {error && <p className="text-danger-base text-label5Regular p-1">{error}</p>}
+        {error && <p className="text-label5Regular text-danger-base p-1">{error}</p>}
       </div>
     );
   }
@@ -211,7 +211,7 @@ PureInput.displayName = 'PureInput';
 
 const pureInput = cva(
   [
-    'outline-none w-full focus:border-primary-base transition text-base-hi text-bodyNormal2Regular rounded border border-base-7 py-2.5 px-3.5',
+    'border-base-7 text-bodyNormal2Regular text-base-hi focus:border-primary-base w-full rounded border py-2.5 px-3.5 outline-none transition',
   ],
   {
     variants: {

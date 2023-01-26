@@ -26,7 +26,7 @@ export function WithInput() {
     <StoryContainer>
       <div className="flex w-full items-center space-x-2">
         <Label htmlFor="email">Email</Label>
-        <Input id="email" placeholder="Email" />
+        <Input id="email" type="email" placeholder="Email" />
       </div>
     </StoryContainer>
   );

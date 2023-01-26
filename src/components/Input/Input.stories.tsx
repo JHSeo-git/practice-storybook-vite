@@ -19,6 +19,7 @@ export const Template: ComponentStory<typeof Input> = (args) => {
 Template.args = {
   placeholder: 'Email',
   disabled: false,
+  type: 'email',
 };
 Template.storyName = 'Default';
 
@@ -36,11 +37,11 @@ export function WithLabel() {
       <div className="w-full">
         <div className="mb-10 flex w-full items-center space-x-2">
           <Label htmlFor="email">Email</Label>
-          <Input id="email" placeholder="Email" />
+          <Input id="email" type="email" placeholder="Email" />
         </div>
         <div className="flex w-full flex-col space-y-2">
           <Label htmlFor="email">Email</Label>
-          <Input id="email" placeholder="Email" />
+          <Input id="email" type="email" placeholder="Email" />
         </div>
       </div>
     </StoryContainer>
@@ -53,13 +54,18 @@ export function WithHelperText() {
       <div className="w-full">
         <div className="mb-10 flex w-full flex-col space-y-2">
           <Label htmlFor="email">Email</Label>
-          <Input id="email" placeholder="Email" />
-          <p className="text-info-base text-label5Regular pl-2">Enter your email address.</p>
+          <Input id="email" type="email" placeholder="Email" />
+          <p className="pl-2 text-label5Regular text-info-base">Enter your email address.</p>
         </div>
         <div className="flex w-full flex-col space-y-2">
           <Label htmlFor="email">Email</Label>
-          <Input id="email" placeholder="Email" defaultValue="incorrect email address" />
-          <p className="text-danger-base text-label5Regular pl-2">
+          <Input
+            id="email"
+            type="email"
+            placeholder="Email"
+            defaultValue="incorrect email address"
+          />
+          <p className="pl-2 text-label5Regular text-danger-base">
             Please enter the correct email format.
           </p>
         </div>

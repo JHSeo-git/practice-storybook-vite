@@ -8,6 +8,9 @@ module.exports = {
     react: {
       version: 'detect',
     },
+    tailwindcss: {
+      callees: ['cn', 'cva'],
+    },
   },
   extends: [
     'plugin:prettier/recommended',

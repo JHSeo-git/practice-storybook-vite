@@ -78,7 +78,7 @@ export const LegacyButton = forwardRef<HTMLButtonElement, LegacyButtonProps>(
 LegacyButton.displayName = 'LegacyButton';
 
 const button = cva(
-  ['font-semibold rounded inline-flex gap-2 items-center justify-center transition'],
+  ['inline-flex items-center justify-center gap-2 rounded font-semibold transition'],
   {
     variants: {
       intent: {
@@ -96,9 +96,9 @@ const button = cva(
         outline: ['border'],
       },
       size: {
-        small: ['text-sm py-1 px-2'],
-        medium: ['text-base py-1.5 px-4'],
-        large: ['text-lg py-2 px-6'],
+        small: ['py-1 px-2 text-sm'],
+        medium: ['py-1.5 px-4 text-base'],
+        large: ['py-2 px-6 text-lg'],
       },
       rounded: {
         true: ['rounded-full'],
@@ -107,10 +107,10 @@ const button = cva(
         true: ['rounded-full'],
       },
       disabled: {
-        true: ['opacity-50 pointer-events-none cursor-not-allowed'],
+        true: ['pointer-events-none cursor-not-allowed opacity-50'],
       },
       loading: {
-        true: ['opacity-70 pointer-events-none'],
+        true: ['pointer-events-none opacity-70'],
       },
     },
     compoundVariants: [
@@ -186,39 +186,39 @@ const button = cva(
       {
         intent: 'neutral',
         variant: 'outline',
-        class: ['bg-base-1 border-base-7 text-base-hi hover:border-base-8 hover:bg-base-1'],
+        class: ['border-base-7 bg-base-1 text-base-hi hover:border-base-8 hover:bg-base-1'],
       },
       {
         intent: 'primary',
         variant: 'outline',
         class: [
-          'bg-primary-1 border-primary-7 text-primary-hi hover:border-primary-8 hover:bg-primary-1',
+          'border-primary-7 bg-primary-1 text-primary-hi hover:border-primary-8 hover:bg-primary-1',
         ],
       },
       {
         intent: 'danger',
         variant: 'outline',
         class: [
-          'bg-danger-1 border-danger-7 text-danger-hi hover:border-danger-8 hover:bg-danger-1',
+          'border-danger-7 bg-danger-1 text-danger-hi hover:border-danger-8 hover:bg-danger-1',
         ],
       },
       {
         intent: 'success',
         variant: 'outline',
         class: [
-          'bg-success-1 border-success-7 text-success-hi hover:border-success-8 hover:bg-success-1',
+          'border-success-7 bg-success-1 text-success-hi hover:border-success-8 hover:bg-success-1',
         ],
       },
       {
         intent: 'info',
         variant: 'outline',
-        class: ['bg-info-1 border-info-7 text-info-hi hover:border-info-8 hover:bg-info-1'],
+        class: ['border-info-7 bg-info-1 text-info-hi hover:border-info-8 hover:bg-info-1'],
       },
       {
         intent: 'warning',
         variant: 'outline',
         class: [
-          'bg-warning-1 border-warning-7 text-warning-11 hover:border-warning-8 hover:bg-warning-1',
+          'border-warning-7 bg-warning-1 text-warning-11 hover:border-warning-8 hover:bg-warning-1',
         ],
       },
       // circle
