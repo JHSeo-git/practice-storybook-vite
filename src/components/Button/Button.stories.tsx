@@ -1,4 +1,5 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Loader2, Mail } from 'lucide-react';
 
 import { StoryContainer } from '../__storybook/StoryContainer';
 import { Button } from './Button';
@@ -209,6 +210,28 @@ export function Disabled() {
           </Button>
         </div>
       </div>
+    </StoryContainer>
+  );
+}
+
+export function WithIcon() {
+  return (
+    <StoryContainer>
+      <Button variant="solid" intent="neutral">
+        <Mail className="mr-2 h-4 w-4" />
+        Login with Email
+      </Button>
+    </StoryContainer>
+  );
+}
+
+export function Loading() {
+  return (
+    <StoryContainer>
+      <Button disabled>
+        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+        Loading
+      </Button>
     </StoryContainer>
   );
 }
