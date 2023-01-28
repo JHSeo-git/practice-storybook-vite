@@ -1,5 +1,5 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Loader2, Mail } from 'lucide-react';
+import { CheckCircle, Loader2, Mail } from 'lucide-react';
 
 import { StoryContainer } from '../__storybook/StoryContainer';
 import { Button } from './Button';
@@ -217,10 +217,16 @@ export function Disabled() {
 export function WithIcon() {
   return (
     <StoryContainer>
-      <Button variant="solid" intent="neutral">
-        <Mail className="mr-2 h-4 w-4" />
-        Login with Email
-      </Button>
+      <div className="flex flex-col space-y-4">
+        <Button variant="solid" intent="neutral">
+          <Mail className="mr-2 h-4 w-4" />
+          Login with Email
+        </Button>
+        <Button variant="solid" intent="neutral">
+          Confirm
+          <CheckCircle className="ml-2 h-4 w-4" />
+        </Button>
+      </div>
     </StoryContainer>
   );
 }

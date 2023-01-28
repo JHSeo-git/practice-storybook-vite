@@ -22,7 +22,7 @@ interface LabelProps extends RadixLabel.PrimitiveLabelProps {
  * The Label component is a wrapper around the @radix-ui/react-input.
  * It is used to label an input element.
  */
-export const Label = React.forwardRef<React.ComponentRef<typeof RadixLabel.Root>, LabelProps>(
+export const Label = React.forwardRef<React.ElementRef<typeof RadixLabel.Root>, LabelProps>(
   ({ className, ...props }, forwardedRef) => {
     return (
       <RadixLabel.Root
@@ -38,4 +38,4 @@ export const Label = React.forwardRef<React.ComponentRef<typeof RadixLabel.Root>
   }
 );
 
-Label.displayName = 'Label';
+Label.displayName = RadixLabel.Root.displayName;

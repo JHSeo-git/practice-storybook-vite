@@ -19,6 +19,7 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:tailwindcss/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:storybook/recommended',
   ],
   overrides: [],
   parser: '@typescript-eslint/parser',
