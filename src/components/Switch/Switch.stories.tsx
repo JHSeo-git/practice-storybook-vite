@@ -23,7 +23,7 @@ Template.storyName = 'Default';
 export function Disabled() {
   return (
     <StoryContainer className="space-x-2">
-      <Switch id="disabled-switch" disabled />
+      <Switch id="disabled-switch" disabled defaultChecked />
       <Label htmlFor="disabled-switch">Disabled Switch</Label>
     </StoryContainer>
   );

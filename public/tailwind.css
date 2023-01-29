@@ -592,6 +592,10 @@ video {
   display: inline-flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .h-4 {
   height: 1rem;
 }
@@ -606,6 +610,14 @@ video {
 
 .h-11 {
   height: 2.75rem;
+}
+
+.h-2\.5 {
+  height: 0.625rem;
+}
+
+.h-2 {
+  height: 0.5rem;
 }
 
 .h-3\.5 {
@@ -638,6 +650,14 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-2\.5 {
+  width: 0.625rem;
+}
+
+.w-2 {
+  width: 0.5rem;
 }
 
 .w-\[180px\] {
@@ -754,6 +774,10 @@ video {
 
 .gap-0 {
   gap: 0px;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .gap-x-2 {
@@ -959,6 +983,14 @@ video {
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.fill-base-hi {
+  fill: #171717;
+}
+
+.fill-primary-base {
+  fill: #6e56cf;
 }
 
 .p-1 {
@@ -1264,6 +1296,16 @@ video {
   .hover\:border-warning-8:hover {
     --tw-border-opacity: 1;
     border-color: rgb(235 188 0 / var(--tw-border-opacity));
+  }
+
+  .hover\:border-base-weak:hover {
+    --tw-border-opacity: 1;
+    border-color: rgb(111 111 111 / var(--tw-border-opacity));
+  }
+
+  .hover\:border-base-9:hover {
+    --tw-border-opacity: 1;
+    border-color: rgb(143 143 143 / var(--tw-border-opacity));
   }
 
   .hover\:bg-base-11:hover {
@@ -1604,6 +1646,13 @@ video {
   opacity: 0.5;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .disabled\:hover\:border-base-7:hover:disabled {
+    --tw-border-opacity: 1;
+    border-color: rgb(219 219 219 / var(--tw-border-opacity));
+  }
+}
+
 .peer:disabled ~ .peer-disabled\:cursor-not-allowed {
   cursor: not-allowed;
 }
@@ -1626,24 +1675,14 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.data-\[state-unchecked\]\:bg-base-6[data-state-unchecked] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(226 226 226 / var(--tw-bg-opacity));
-}
-
-.data-\[state\=checked\]\:bg-base-hi[data-state=checked] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
-}
-
-.data-\[state-unchecked\]\:bg-base-weak[data-state-unchecked] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(111 111 111 / var(--tw-bg-opacity));
-}
-
 .data-\[state\=unchecked\]\:bg-base-6[data-state=unchecked] {
   --tw-bg-opacity: 1;
   background-color: rgb(226 226 226 / var(--tw-bg-opacity));
+}
+
+.data-\[state\=checked\]\:bg-primary-base[data-state=checked] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(110 86 207 / var(--tw-bg-opacity));
 }
 
 .data-\[disabled\]\:opacity-50[data-disabled] {
