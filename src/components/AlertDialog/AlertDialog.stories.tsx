@@ -12,8 +12,6 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-  AlertDialogOverlay,
-  AlertDialogPortal,
   AlertDialogTitle,
   AlertDialogTrigger,
 } from './AlertDialog';
@@ -30,8 +28,6 @@ export default {
     AlertDialogDescription,
     AlertDialogFooter,
     AlertDialogHeader,
-    AlertDialogOverlay,
-    AlertDialogPortal,
     AlertDialogTitle,
     AlertDialogTrigger,
   },
@@ -75,7 +71,7 @@ export function Controlled() {
       <AlertDialog open={open} onOpenChange={setOpen}>
         <AlertDialogTrigger asChild>
           <Button variant="outline" intent="primary">
-            Controlled Open
+            Open
           </Button>
         </AlertDialogTrigger>
         <AlertDialogContent>
@@ -119,7 +115,7 @@ export function WithContainer() {
       <AlertDialog>
         <AlertDialogTrigger asChild>
           <Button variant="outline" intent="primary">
-            Open in Container
+            Open
           </Button>
         </AlertDialogTrigger>
         <AlertDialogContent container={container}>

@@ -56,7 +56,7 @@ interface AlertDialogPortalProps extends RadixAlertDialog.AlertDialogPortalProps
    */
   container?: RadixAlertDialog.AlertDialogPortalProps['container'];
 }
-export const AlertDialogPortal = ({ className, children, ...props }: AlertDialogPortalProps) => {
+const AlertDialogPortal = ({ className, children, ...props }: AlertDialogPortalProps) => {
   return (
     <RadixAlertDialog.Portal className={className} {...props}>
       <div className="fixed inset-0 z-50 flex items-end justify-center sm:items-center">
@@ -80,7 +80,7 @@ interface AlertDialogOverlayProps extends RadixAlertDialog.AlertDialogOverlayPro
    */
   asChild?: RadixAlertDialog.AlertDialogOverlayProps['asChild'];
 }
-export const AlertDialogOverlay = React.forwardRef<
+const AlertDialogOverlay = React.forwardRef<
   React.ElementRef<typeof RadixAlertDialog.Overlay>,
   AlertDialogOverlayProps
 >(({ className, ...props }, forwardedRef) => {
@@ -216,7 +216,7 @@ export const AlertDialogDescription = React.forwardRef<
   return (
     <RadixAlertDialog.Description
       ref={forwardedRef}
-      className={cn('text-bodyRelaxed2Regular text-base-weak', className)}
+      className={cn('text-bodyNormal2Regular text-base-weak', className)}
       {...props}
     />
   );
