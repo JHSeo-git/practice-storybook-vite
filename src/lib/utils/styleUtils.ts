@@ -50,6 +50,10 @@ const fontSizes = [
   'label6Regular',
 ];
 
+/**
+ * @see https://github.com/dcastil/tailwind-merge/blob/v1.8.1/docs/configuration.md#theme
+ * fontSize not supported by tailwind-merge
+ */
 const twMerge = extendTailwindMerge({
   classGroups: {
     'font-size': [{ text: fontSizes }],

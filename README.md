@@ -8,7 +8,7 @@ Practice for React + Vite + Storybook
 ## docs
 
 - [Initialize](./__docs/initialize.md)
-- [UI]
+- [UI](#)
   - [radix-ui](#)
   - [lucide-icon](#)
   - [tailwindcss](./__docs/storybook-styles/tailwindcss.md)
@@ -16,4 +16,4 @@ Practice for React + Vite + Storybook
 
 ## todo
 
-- [ ] more detailed docs
+- [ ] more detailed storybook docs
