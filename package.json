@@ -28,7 +28,8 @@
     "preview": "serve -l 3003 ./storybook-static",
     "vite:build": "tsc && vite build",
     "vite:dev": "vite",
-    "vite:preview": "vite preview"
+    "vite:preview": "vite preview",
+    "zz:build": "vite build -c vite.lib.config.ts"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
