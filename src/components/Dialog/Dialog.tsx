@@ -22,9 +22,9 @@ interface DialogProps extends RadixDialog.DialogProps {
    */
   modal?: RadixDialog.DialogProps['modal'];
 }
-export function Dialog(props: DialogProps) {
+export const Dialog = (props: DialogProps) => {
   return <RadixDialog.Root {...props} />;
-}
+};
 
 interface DialogTriggerProps extends RadixDialog.DialogTriggerProps {
   /**

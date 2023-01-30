@@ -1,9 +1,9 @@
-export * as AlertDialog from './components/AlertDialog';
-export * as Button from './components/Button';
-export * as Checkbox from './components/Checkbox';
-export * as Dialog from './components/Dialog';
-export * as Input from './components/Input';
-export * as Label from './components/Label';
-export * as RadioGroup from './components/RadioGroup';
-export * as Select from './components/Select';
-export * as Switch from './components/Switch';
+export * from './components/AlertDialog';
+export * from './components/Button';
+export * from './components/Checkbox';
+export * from './components/Dialog';
+export * from './components/Input';
+export * from './components/Label';
+export * from './components/RadioGroup';
+export * from './components/Select';
+export * from './components/Switch';

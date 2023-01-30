@@ -2,8 +2,9 @@
 
 Practice for React + Vite + Storybook
 
-> **Caution**  
-> This project is not for production, but for practice.
+> **⚠️ Caution**  
+> This project is not for production, but for practice.  
+> and only for ESM, CJS (umd is not supported)
 
 ## docs
 
