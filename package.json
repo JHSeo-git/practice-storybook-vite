@@ -22,6 +22,7 @@
     "build:storybook": "build-storybook",
     "build:tw": "yarn builz:vars && tailwindcss -i ./src/styles/tailwind.css -o ./public/tailwind.css",
     "builz:vars": "tsc -p tsconfig.vars.json",
+    "chromatic": "npx chromatic",
     "dev": "concurrently \"yarn:dev:*\"",
     "dev:storybook": "start-storybook -p 6006",
     "dev:tw": "tailwindcss -i ./src/styles/tailwind.css -o ./public/tailwind.css -w",
@@ -42,6 +43,7 @@
     "@radix-ui/react-radio-group": "^1.1.1",
     "@radix-ui/react-select": "^1.2.0",
     "@radix-ui/react-switch": "^1.0.1",
+    "@radix-ui/react-tooltip": "^1.0.3",
     "@storybook/addon-a11y": "^6.5.16",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
@@ -58,6 +60,7 @@
     "@vitejs/plugin-react-swc": "^3.0.0",
     "autoprefixer": "^10.4.13",
     "babel-loader": "^8.3.0",
+    "chromatic": "^6.15.0",
     "class-variance-authority": "^0.4.0",
     "clsx": "^1.2.1",
     "concurrently": "^7.6.0",
@@ -98,8 +101,11 @@
     "@radix-ui/react-radio-group": "^1.1.1",
     "@radix-ui/react-select": "^1.2.0",
     "@radix-ui/react-switch": "^1.0.1",
+    "@radix-ui/react-tooltip": "^1.0.3",
     "class-variance-authority": "^0.4.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "practice-storybook-vite@0.0.1"
 }

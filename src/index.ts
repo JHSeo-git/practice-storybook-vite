@@ -7,3 +7,4 @@ export * from './components/Label';
 export * from './components/RadioGroup';
 export * from './components/Select';
 export * from './components/Switch';
+export * from './components/Tooltip';
