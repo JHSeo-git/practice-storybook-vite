@@ -4,61 +4,12 @@
   "private": true,
   "exports": {
     ".": {
-      "require": "./dist/index.cjs.js",
+      "require": "./dist/index.umd.js",
       "import": "./dist/index.es.js",
       "types": "./dist/types/index.d.ts"
-    },
-    "./AlertDialog": {
-      "require": "./dist/AlertDialog.cjs.js",
-      "import": "./dist/AlertDialog.es.js",
-      "types": "./dist/types/components/AlertDialog/index.d.ts"
-    },
-    "./Button": {
-      "require": "./dist/Button.cjs.js",
-      "import": "./dist/Button.es.js",
-      "types": "./dist/types/components/Button/index.d.ts"
-    },
-    "./Checkbox": {
-      "require": "./dist/Checkbox.cjs.js",
-      "import": "./dist/Checkbox.es.js",
-      "types": "./dist/types/components/Checkbox/index.d.ts"
-    },
-    "./Dialog": {
-      "require": "./dist/Dialog.cjs.js",
-      "import": "./dist/Dialog.es.js",
-      "types": "./dist/types/components/Dialog/index.d.ts"
-    },
-    "./Input": {
-      "require": "./dist/Input.cjs.js",
-      "import": "./dist/Input.es.js",
-      "types": "./dist/types/components/Input/index.d.ts"
-    },
-    "./Label": {
-      "require": "./dist/Label.cjs.js",
-      "import": "./dist/Label.es.js",
-      "types": "./dist/types/components/Label/index.d.ts"
-    },
-    "./RadioGroup": {
-      "require": "./dist/RadioGroup.cjs.js",
-      "import": "./dist/RadioGroup.es.js",
-      "types": "./dist/types/components/RadioGroup/index.d.ts"
-    },
-    "./Select": {
-      "require": "./dist/Select.cjs.js",
-      "import": "./dist/Select.es.js",
-      "types": "./dist/types/components/Select/index.d.ts"
-    },
-    "./Switch": {
-      "require": "./dist/Switch.cjs.js",
-      "import": "./dist/Switch.es.js",
-      "types": "./dist/types/components/Switch/index.d.ts"
-    },
-    "./global.css": {
-      "require": "./dist/tailwind.css",
-      "import": "./dist/tailwind.css"
     }
   },
-  "main": "./dist/index.cjs.js",
+  "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
   "types": "./dist/types/index.d.ts",
   "files": [
@@ -75,7 +26,7 @@
     "dev:vars": "nodemon --watch ./src/styles/vars --ext ts --exec \"yarn builz:vars\"",
     "format": "eslint --fix ./src --ext .ts,.tsx,.js,.jsx --ignore-path .gitignore && prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
     "preview": "serve -l 3003 ./storybook-static",
-    "vite:build": "yarn build:tw && vite build",
+    "vite:build": "tsc && vite build",
     "vite:dev": "vite",
     "vite:preview": "vite preview"
   },
