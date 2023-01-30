@@ -1,7 +1,5 @@
 {
   "compilerOptions": {
-    "incremental": true,
-    "composite": true,
     "outDir": "./tailwindcss-vars",
     "rootDir": "./src/styles/vars",
     "target": "ESNext",
