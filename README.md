@@ -6,6 +6,8 @@ Practice for React + Vite + Storybook
 > This project is not for production, but for practice.  
 > and only for ESM, CJS (umd is not supported)
 
+https://practice-storybook-vite.pages.dev
+
 ## docs
 
 - [Initialize](./__docs/initialize.md)

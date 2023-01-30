@@ -73,7 +73,7 @@ export function WhenDisabledTrigger() {
   );
 }
 
-export function WhenCollison() {
+export function WhenCollision() {
   return (
     <StoryContainer>
       <TooltipProvider>
