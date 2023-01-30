@@ -2,18 +2,20 @@
   "name": "practice-storybook-vite",
   "version": "0.0.1",
   "private": true,
+  "sideEffects": false,
   "exports": {
     ".": {
-      "require": "./dist/index.umd.js",
-      "import": "./dist/index.es.js",
-      "types": "./dist/types/index.d.ts"
+      "require": "./dist-lib/src/index.js",
+      "import": "./dist-lib/src/index.mjs",
+      "types": "./dist-lib/src/index.d.ts"
     }
   },
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.es.js",
-  "types": "./dist/types/index.d.ts",
+  "main": "./dist-lib/src/index.js",
+  "module": "./dist-lib/src/index.mjs",
+  "types": "./dist-lib/src/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "dist-lib"
   ],
   "scripts": {
     "build": "concurrently \"yarn:build:*\"",
@@ -25,11 +27,11 @@
     "dev:tw": "tailwindcss -i ./src/styles/tailwind.css -o ./public/tailwind.css -w",
     "dev:vars": "nodemon --watch ./src/styles/vars --ext ts --exec \"yarn builz:vars\"",
     "format": "eslint --fix ./src --ext .ts,.tsx,.js,.jsx --ignore-path .gitignore && prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
+    "lib:build": "yarn build:tw && vite build -c vite.lib.config.ts",
     "preview": "serve -l 3003 ./storybook-static",
     "vite:build": "tsc && vite build",
     "vite:dev": "vite",
-    "vite:preview": "vite preview",
-    "zz:build": "vite build -c vite.lib.config.ts"
+    "vite:preview": "vite preview"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -89,6 +91,14 @@
     "vite-tsconfig-paths": "^4.0.5"
   },
   "peerDependencies": {
+    "@radix-ui/react-alert-dialog": "^1.0.2",
+    "@radix-ui/react-checkbox": "^1.0.1",
+    "@radix-ui/react-dialog": "^1.0.2",
+    "@radix-ui/react-label": "^2.0.0",
+    "@radix-ui/react-radio-group": "^1.1.1",
+    "@radix-ui/react-select": "^1.2.0",
+    "@radix-ui/react-switch": "^1.0.1",
+    "class-variance-authority": "^0.4.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   }
