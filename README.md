@@ -3,8 +3,7 @@
 Practice for React + Vite + Storybook
 
 > **⚠️ Caution**  
-> This project is not for production, but for practice.  
-> and only for ESM, CJS (umd is not supported)
+> This project is not for production, but for practice.
 
 https://practice-storybook-vite.pages.dev
 
