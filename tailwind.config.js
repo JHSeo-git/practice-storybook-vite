@@ -426,6 +426,55 @@ module.exports = {
           12: vars.$scale.color.yellow12,
         },
       },
+      animation: {
+        'toast-hide': 'radix-toast-hide 0.1s ease-in forwards',
+        'toast-slide-in-right': 'radix-toast-slide-in-right 0.15s cubic-bezier(0.16, 1, 0.3, 1)',
+        'toast-slide-in-down': 'radix-toast-slide-in-down 0.15s cubic-bezier(0.16, 1, 0.3, 1)',
+        'toast-slide-in-left': 'radix-toast-slide-in-left 0.15s cubic-bezier(0.16, 1, 0.3, 1)',
+        'toast-slide-in-up': 'radix-toast-slide-in-up 0.15s cubic-bezier(0.16, 1, 0.3, 1)',
+        'toast-swipe-out-x': 'radix-toast-swipe-out-x 0.1s ease-out forwards',
+        'toast-swipe-out-y': 'radix-toast-swipe-out-y 0.1s ease-out forwards',
+        'toast-swipe-out-x-reverse': 'radix-toast-swipe-out-x-reverse 0.1s ease-out forwards',
+        'toast-swipe-out-y-reverse': 'radix-toast-swipe-out-y-reverse 0.1s ease-out forwards',
+      },
+      keyframes: {
+        'radix-toast-hide': {
+          '0%': { opacity: 1 },
+          '100%': { opacity: 0 },
+        },
+        'radix-toast-slide-in-right': {
+          '0%': { transform: 'translateX(calc(100% + 1rem))' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        'radix-toast-slide-in-down': {
+          '0%': { transform: 'translateY(calc(100% + 1rem))' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        'radix-toast-slide-in-left': {
+          '0%': { transform: 'translateX(calc(-1 * (100% + 1rem)))' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        'radix-toast-slide-in-up': {
+          '0%': { transform: 'translateY(calc(-1 * (100% + 1rem)))' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        'radix-toast-swipe-out-x': {
+          '0%': { transform: 'translateX(var(--radix-toast-swipe-end-x))' },
+          '100%': { transform: 'translateX(calc(100% + 1rem))' },
+        },
+        'radix-toast-swipe-out-y': {
+          '0%': { transform: 'translateY(var(--radix-toast-swipe-end-y))' },
+          '100%': { transform: 'translateY(calc(100% + 1rem))' },
+        },
+        'radix-toast-swipe-out-x-reverse': {
+          '0%': { transform: 'translateX(var(--radix-toast-swipe-end-x))' },
+          '100%': { transform: 'translateX(calc(-1 * (100% + 1rem)))' },
+        },
+        'radix-toast-swipe-out-y-reverse': {
+          '0%': { transform: 'translateY(var(--radix-toast-swipe-end-y))' },
+          '100%': { transform: 'translateY(calc(-1 * (100% + 1rem)))' },
+        },
+      },
     },
   },
   plugins: [require('tailwindcss-animate')],

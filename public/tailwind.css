@@ -602,6 +602,26 @@ video {
   left: 0.5rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -737,10 +757,6 @@ video {
   height: 2rem;
 }
 
-.h-12 {
-  height: 3rem;
-}
-
 .min-h-\[300px\] {
   min-height: 300px;
 }
@@ -805,10 +821,6 @@ video {
   width: 9rem;
 }
 
-.w-12 {
-  width: 3rem;
-}
-
 .min-w-\[8rem\] {
   min-width: 8rem;
 }
@@ -821,6 +833,10 @@ video {
   max-width: 32rem;
 }
 
+.max-w-\[100vw\] {
+  max-width: 100vw;
+}
+
 .max-w-sm {
   max-width: 24rem;
 }
@@ -831,6 +847,11 @@ video {
 
 .shrink-0 {
   flex-shrink: 0;
+}
+
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .scale-100 {
@@ -1187,6 +1208,10 @@ video {
   padding: 0.25rem;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
 .p-0 {
   padding: 0px;
 }
@@ -1300,6 +1325,18 @@ video {
   font-size: 0.75rem;
   line-height: 1.375;
   font-weight: 400;
+}
+
+.text-subtitle1Bold {
+  font-size: 1rem;
+  line-height: 1.375;
+  font-weight: 700;
+}
+
+.text-label5Bold {
+  font-size: 0.75rem;
+  line-height: 1.375;
+  font-weight: 700;
 }
 
 .text-sm {
@@ -1513,6 +1550,10 @@ video {
 
 .slide-in-from-left-1 {
   --tw-enter-translate-x: -0.25rem;
+}
+
+.paused {
+  animation-play-state: paused;
 }
 
 .placeholder\:text-base-9::-moz-placeholder {
@@ -1942,6 +1983,172 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.data-\[swipe-direction\=right\]\:data-\[swipe\=move\]\:translate-x-\[var\(--radix-toast-swipe-move-x\)\][data-swipe=move][data-swipe-direction=right] {
+  --tw-translate-x: var(--radix-toast-swipe-move-x);
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.data-\[swipe-direction\=right\]\:data-\[swipe\=cancel\]\:translate-x-0[data-swipe=cancel][data-swipe-direction=right] {
+  --tw-translate-x: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.data-\[swipe-direction\=down\]\:data-\[swipe\=move\]\:translate-y-\[var\(--radix-toast-swipe-move-y\)\][data-swipe=move][data-swipe-direction=down] {
+  --tw-translate-y: var(--radix-toast-swipe-move-y);
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.data-\[swipe-direction\=down\]\:data-\[swipe\=cancel\]\:translate-y-0[data-swipe=cancel][data-swipe-direction=down] {
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.data-\[swipe-direction\=left\]\:data-\[swipe\=move\]\:translate-x-\[var\(--radix-toast-swipe-move-x\)\][data-swipe=move][data-swipe-direction=left] {
+  --tw-translate-x: var(--radix-toast-swipe-move-x);
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.data-\[swipe-direction\=left\]\:data-\[swipe\=cancel\]\:translate-x-0[data-swipe=cancel][data-swipe-direction=left] {
+  --tw-translate-x: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.data-\[swipe-direction\=up\]\:data-\[swipe\=move\]\:translate-y-\[var\(--radix-toast-swipe-move-y\)\][data-swipe=move][data-swipe-direction=up] {
+  --tw-translate-y: var(--radix-toast-swipe-move-y);
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.data-\[swipe-direction\=up\]\:data-\[swipe\=cancel\]\:translate-y-0[data-swipe=cancel][data-swipe-direction=up] {
+  --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes radix-toast-hide {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.data-\[state\=closed\]\:animate-toast-hide[data-state=closed] {
+  animation: radix-toast-hide 0.1s ease-in forwards;
+}
+
+@keyframes radix-toast-slide-in-right {
+  0% {
+    transform: translateX(calc(100% + 1rem));
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.data-\[swipe-direction\=right\]\:data-\[state\=open\]\:animate-toast-slide-in-right[data-state=open][data-swipe-direction=right] {
+  animation: radix-toast-slide-in-right 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes radix-toast-swipe-out-x {
+  0% {
+    transform: translateX(var(--radix-toast-swipe-end-x));
+  }
+
+  100% {
+    transform: translateX(calc(100% + 1rem));
+  }
+}
+
+.data-\[swipe-direction\=right\]\:data-\[swipe\=end\]\:animate-toast-swipe-out-x[data-swipe=end][data-swipe-direction=right] {
+  animation: radix-toast-swipe-out-x 0.1s ease-out forwards;
+}
+
+@keyframes radix-toast-slide-in-down {
+  0% {
+    transform: translateY(calc(100% + 1rem));
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.data-\[swipe-direction\=down\]\:data-\[state\=open\]\:animate-toast-slide-in-down[data-state=open][data-swipe-direction=down] {
+  animation: radix-toast-slide-in-down 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes radix-toast-swipe-out-y {
+  0% {
+    transform: translateY(var(--radix-toast-swipe-end-y));
+  }
+
+  100% {
+    transform: translateY(calc(100% + 1rem));
+  }
+}
+
+.data-\[swipe-direction\=down\]\:data-\[swipe\=end\]\:animate-toast-swipe-out-y[data-swipe=end][data-swipe-direction=down] {
+  animation: radix-toast-swipe-out-y 0.1s ease-out forwards;
+}
+
+@keyframes radix-toast-slide-in-left {
+  0% {
+    transform: translateX(calc(-1 * (100% + 1rem)));
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.data-\[swipe-direction\=left\]\:data-\[state\=open\]\:animate-toast-slide-in-left[data-state=open][data-swipe-direction=left] {
+  animation: radix-toast-slide-in-left 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes radix-toast-swipe-out-x-reverse {
+  0% {
+    transform: translateX(var(--radix-toast-swipe-end-x));
+  }
+
+  100% {
+    transform: translateX(calc(-1 * (100% + 1rem)));
+  }
+}
+
+.data-\[swipe-direction\=left\]\:data-\[swipe\=end\]\:animate-toast-swipe-out-x-reverse[data-swipe=end][data-swipe-direction=left] {
+  animation: radix-toast-swipe-out-x-reverse 0.1s ease-out forwards;
+}
+
+@keyframes radix-toast-slide-in-up {
+  0% {
+    transform: translateY(calc(-1 * (100% + 1rem)));
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.data-\[swipe-direction\=up\]\:data-\[state\=open\]\:animate-toast-slide-in-up[data-state=open][data-swipe-direction=up] {
+  animation: radix-toast-slide-in-up 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes radix-toast-swipe-out-y-reverse {
+  0% {
+    transform: translateY(var(--radix-toast-swipe-end-y));
+  }
+
+  100% {
+    transform: translateY(calc(-1 * (100% + 1rem)));
+  }
+}
+
+.data-\[swipe-direction\=up\]\:data-\[swipe\=end\]\:animate-toast-swipe-out-y-reverse[data-swipe=end][data-swipe-direction=up] {
+  animation: radix-toast-swipe-out-y-reverse 0.1s ease-out forwards;
+}
+
 .data-\[state\=open\]\:bg-base-3[data-state=open] {
   --tw-bg-opacity: 1;
   background-color: rgb(243 243 243 / var(--tw-bg-opacity));
@@ -1959,6 +2166,12 @@ video {
 
 .data-\[disabled\]\:opacity-50[data-disabled] {
   opacity: 0.5;
+}
+
+.data-\[swipe\=cancel\]\:transition-transform[data-swipe=cancel] {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .data-\[side\=bottom\]\:slide-in-from-top-2[data-side=bottom] {
