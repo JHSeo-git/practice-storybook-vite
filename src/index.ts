@@ -1,4 +1,5 @@
 export * from './components/AlertDialog';
+export * from './components/AspectRatio';
 export * from './components/Avatar';
 export * from './components/Button';
 export * from './components/Checkbox';
