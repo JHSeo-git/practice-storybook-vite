@@ -168,7 +168,7 @@ export const Toast = React.forwardRef<React.ElementRef<typeof RadixToast.Root>, 
         ref={forwardedRef}
         className={cn(
           'rounded-md bg-base-lo p-4 shadow-md',
-          'data-[state=closed]:animate-toast-hide',
+          'data-[state=closed]:animate-hide',
           'data-[swipe=cancel]:transition-transform',
           'data-[swipe-direction=right]:data-[state=open]:animate-toast-slide-in-right',
           'data-[swipe-direction=right]:data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)]',

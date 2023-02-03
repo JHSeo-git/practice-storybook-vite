@@ -427,7 +427,7 @@ module.exports = {
         },
       },
       animation: {
-        'toast-hide': 'radix-toast-hide 0.1s ease-in forwards',
+        hide: 'radix-hide 0.1s ease-in forwards',
         'toast-slide-in-right': 'radix-toast-slide-in-right 0.15s cubic-bezier(0.16, 1, 0.3, 1)',
         'toast-slide-in-down': 'radix-toast-slide-in-down 0.15s cubic-bezier(0.16, 1, 0.3, 1)',
         'toast-slide-in-left': 'radix-toast-slide-in-left 0.15s cubic-bezier(0.16, 1, 0.3, 1)',
@@ -438,7 +438,7 @@ module.exports = {
         'toast-swipe-out-y-reverse': 'radix-toast-swipe-out-y-reverse 0.1s ease-out forwards',
       },
       keyframes: {
-        'radix-toast-hide': {
+        'radix-hide': {
           '0%': { opacity: 1 },
           '100%': { opacity: 0 },
         },
