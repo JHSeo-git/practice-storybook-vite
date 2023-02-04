@@ -665,6 +665,11 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -880,6 +885,10 @@ video {
 
 .w-\[180px\] {
   width: 180px;
+}
+
+.w-px {
+  width: 1px;
 }
 
 .w-\[44px\] {
@@ -1304,11 +1313,6 @@ video {
   background-color: rgb(219 219 219 / var(--tw-bg-opacity));
 }
 
-.bg-base-weak {
-  --tw-bg-opacity: 1;
-  background-color: rgb(111 111 111 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1622,6 +1626,12 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-sm {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -1631,12 +1641,6 @@ video {
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-sm {
-  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -2228,6 +2232,20 @@ video {
   animation: radix-hide 0.1s ease-in forwards;
 }
 
+@keyframes radix-hide {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.data-\[state\=hidden\]\:animate-hide[data-state=hidden] {
+  animation: radix-hide 0.1s ease-in forwards;
+}
+
 @keyframes radix-toast-slide-in-right {
   0% {
     transform: translateX(calc(100% + 1rem));
@@ -2338,20 +2356,6 @@ video {
 
 .data-\[swipe-direction\=up\]\:data-\[swipe\=end\]\:animate-toast-swipe-out-y-reverse[data-swipe=end][data-swipe-direction=up] {
   animation: radix-toast-swipe-out-y-reverse 0.1s ease-out forwards;
-}
-
-@keyframes radix-hide {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-.data-\[state\=hidden\]\:animate-hide[data-state=hidden] {
-  animation: radix-hide 0.1s ease-in forwards;
 }
 
 .data-\[state\=open\]\:bg-base-3[data-state=open] {

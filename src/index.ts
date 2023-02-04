@@ -9,6 +9,7 @@ export * from './components/DropdownMenu';
 export * from './components/Input';
 export * from './components/Label';
 export * from './components/RadioGroup';
+export * from './components/ScrollArea';
 export * from './components/Select';
 export * from './components/Switch';
 export * from './components/Tabs';
