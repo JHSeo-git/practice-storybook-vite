@@ -23,6 +23,7 @@ const DatePickerContext = React.createContext<DatePickerContextValue | null>(nul
 
 const DatePickerProvider = ({
   children,
+  defaultOpen = false,
   open: propOpen,
   onOpenChange: propOnOpenChange,
   calendarView: propCalendarView,
@@ -30,7 +31,7 @@ const DatePickerProvider = ({
   config,
   ...props
 }: DatePickerProps) => {
-  const [open, setOpen] = React.useState(propOpen);
+  const [open, setOpen] = React.useState(propOpen || defaultOpen);
   const onOpenChange = React.useCallback(
     (_open: boolean) => {
       setOpen(_open);
