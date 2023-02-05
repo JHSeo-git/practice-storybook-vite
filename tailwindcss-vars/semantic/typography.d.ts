@@ -231,6 +231,11 @@ export declare const bodyRelaxed2Bold: Readonly<{
     lineHeight: 1.625;
     fontWeight: 700;
 }>;
+export declare const bodyRelaxed3Bold: Readonly<{
+    fontSize: "0.75rem";
+    lineHeight: 1.625;
+    fontWeight: 700;
+}>;
 export declare const bodyNormal1Bold: Readonly<{
     fontSize: "1rem";
     lineHeight: 1.5;
@@ -238,6 +243,11 @@ export declare const bodyNormal1Bold: Readonly<{
 }>;
 export declare const bodyNormal2Bold: Readonly<{
     fontSize: "0.875rem";
+    lineHeight: 1.5;
+    fontWeight: 700;
+}>;
+export declare const bodyNormal3Bold: Readonly<{
+    fontSize: "0.75rem";
     lineHeight: 1.5;
     fontWeight: 700;
 }>;
@@ -251,6 +261,11 @@ export declare const bodySnug2Bold: Readonly<{
     lineHeight: 1.375;
     fontWeight: 700;
 }>;
+export declare const bodySnug3Bold: Readonly<{
+    fontSize: "0.75rem";
+    lineHeight: 1.375;
+    fontWeight: 700;
+}>;
 export declare const bodyRelaxed1Regular: Readonly<{
     fontSize: "1rem";
     lineHeight: 1.625;
@@ -258,6 +273,11 @@ export declare const bodyRelaxed1Regular: Readonly<{
 }>;
 export declare const bodyRelaxed2Regular: Readonly<{
     fontSize: "0.875rem";
+    lineHeight: 1.625;
+    fontWeight: 400;
+}>;
+export declare const bodyRelaxed3Regular: Readonly<{
+    fontSize: "0.75rem";
     lineHeight: 1.625;
     fontWeight: 400;
 }>;
@@ -271,6 +291,11 @@ export declare const bodyNormal2Regular: Readonly<{
     lineHeight: 1.5;
     fontWeight: 400;
 }>;
+export declare const bodyNormal3Regular: Readonly<{
+    fontSize: "0.75rem";
+    lineHeight: 1.5;
+    fontWeight: 400;
+}>;
 export declare const bodySnug1Regular: Readonly<{
     fontSize: "1rem";
     lineHeight: 1.375;
@@ -278,6 +303,11 @@ export declare const bodySnug1Regular: Readonly<{
 }>;
 export declare const bodySnug2Regular: Readonly<{
     fontSize: "0.875rem";
+    lineHeight: 1.375;
+    fontWeight: 400;
+}>;
+export declare const bodySnug3Regular: Readonly<{
+    fontSize: "0.75rem";
     lineHeight: 1.375;
     fontWeight: 400;
 }>;

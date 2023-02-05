@@ -55,7 +55,7 @@ export function WithHelperText() {
         <div className="mb-10 flex w-full flex-col space-y-2">
           <Label htmlFor="email">Email</Label>
           <Input id="email" type="email" placeholder="Email" />
-          <p className="pl-2 text-label5Regular text-info-base">Enter your email address.</p>
+          <p className="text-label5Regular text-info-base pl-2">Enter your email address.</p>
         </div>
         <div className="flex w-full flex-col space-y-2">
           <Label htmlFor="email">Email</Label>
@@ -65,7 +65,7 @@ export function WithHelperText() {
             placeholder="Email"
             defaultValue="incorrect email address"
           />
-          <p className="pl-2 text-label5Regular text-danger-base">
+          <p className="text-label5Regular text-danger-base pl-2">
             Please enter the correct email format.
           </p>
         </div>

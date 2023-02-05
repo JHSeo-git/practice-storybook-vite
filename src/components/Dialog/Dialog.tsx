@@ -86,7 +86,7 @@ const DialogOverlay = React.forwardRef<
     <RadixDialog.Overlay
       ref={forwardedRef}
       className={cn(
-        'fixed inset-0 z-50 bg-base-hi/50 backdrop-blur-sm transition-opacity animate-in fade-in',
+        'bg-base-hi/50 animate-in fade-in fixed inset-0 z-50 backdrop-blur-sm transition-opacity',
         className
       )}
       {...props}
@@ -143,8 +143,8 @@ export const DialogContent = React.forwardRef<
       <RadixDialog.Content
         ref={forwardedRef}
         className={cn(
-          'fixed z-50 grid w-full scale-100 gap-4 bg-base-lo p-6 opacity-100 animate-in fade-in-90 slide-in-from-bottom-10',
-          'sm:max-w-lg sm:rounded-lg sm:zoom-in-90 sm:slide-in-from-bottom-0',
+          'bg-base-lo animate-in fade-in-90 slide-in-from-bottom-10 fixed z-50 grid w-full scale-100 gap-4 p-6 opacity-100',
+          'sm:zoom-in-90 sm:slide-in-from-bottom-0 sm:max-w-lg sm:rounded-lg',
           className
         )}
         {...props}
@@ -154,7 +154,7 @@ export const DialogContent = React.forwardRef<
           className={cn(
             'absolute top-4 right-4 rounded-sm opacity-70 transition-opacity',
             'hover:opacity-100',
-            'focus:outline-none focus:ring-2 focus:ring-base-7 focus:ring-offset-2'
+            'focus:ring-base-7 focus:outline-none focus:ring-2 focus:ring-offset-2'
           )}
         >
           <X className="h-4 w-4" />

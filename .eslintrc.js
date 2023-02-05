@@ -36,6 +36,7 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'react/prop-types': 'off',
     'simple-import-sort/exports': 'error',
     'simple-import-sort/imports': 'error',
     'tailwindcss/no-custom-classname': 'off',

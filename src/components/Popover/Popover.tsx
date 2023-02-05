@@ -138,7 +138,7 @@ export const PopoverContent = React.forwardRef<
       <RadixPopover.Content
         ref={forwardedRef}
         className={cn(
-          'z-50 rounded-md border border-base-7 bg-base-lo p-4 shadow-md outline-none animate-in',
+          'border-base-7 bg-base-lo animate-in z-50 rounded-md border p-4 shadow-md outline-none',
           'data-[side=bottom]:slide-in-from-top-2 data-[side=top]:slide-in-from-bottom-2',
           'data-[state=closed]:animate-hide',
           className

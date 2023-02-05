@@ -17,7 +17,7 @@ export const Template: ComponentStory<typeof Separator> = (args) => {
           <p className="text-label5Regular text-base-weak">An open-source UI component library.</p>
         </div>
         <Separator className="my-4" />
-        <div className="flex h-5 items-center space-x-4 text-bodyNormal2Regular">
+        <div className="text-bodyNormal2Regular flex h-5 items-center space-x-4">
           <span>Blog</span>
           <Separator orientation="vertical" />
           <span>Docs</span>

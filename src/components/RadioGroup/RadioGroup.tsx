@@ -84,16 +84,16 @@ export const RadioGroupItem = React.forwardRef<
     <RadixRadioGroup.Item
       ref={forwardedRef}
       className={cn(
-        'peer h-4 w-4 rounded-full border border-base-7 text-base-hi',
+        'border-base-7 text-base-hi peer h-4 w-4 rounded-full border',
         'hover:border-base-9',
-        'focus:outline-none focus:ring-2 focus:ring-base-7 focus:ring-offset-2',
-        'disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:border-base-7',
+        'focus:ring-base-7 focus:outline-none focus:ring-2 focus:ring-offset-2',
+        'disabled:hover:border-base-7 disabled:cursor-not-allowed disabled:opacity-50',
         className
       )}
       {...props}
     >
       <RadixRadioGroup.Indicator className="flex items-center justify-center">
-        <Circle className="h-2.5 w-2.5 fill-primary-base" />
+        <Circle className="fill-primary-base h-2.5 w-2.5" />
       </RadixRadioGroup.Indicator>
       {children}
     </RadixRadioGroup.Item>

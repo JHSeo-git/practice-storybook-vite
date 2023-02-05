@@ -13,6 +13,7 @@
     // for cva
     ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
     // for [*]ClassName props (example: labelClassName, inputClassName, ...)
-    "[\\S]*ClassName=[\"'`]([^\"'`]*)[\"'`]"
+    "[\\S]*ClassName=[\"'`]([^\"'`]*)[\"'`]",
+    "[\\S]*ClassName: [\"'`]([^\"'`]*)[\"'`]"
   ]
 }

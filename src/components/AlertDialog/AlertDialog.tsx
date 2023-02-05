@@ -88,7 +88,7 @@ const AlertDialogOverlay = React.forwardRef<
     <RadixAlertDialog.Overlay
       ref={forwardedRef}
       className={cn(
-        'fixed inset-0 z-50 bg-base-hi/50 backdrop-blur-sm transition-opacity animate-in fade-in',
+        'bg-base-hi/50 animate-in fade-in fixed inset-0 z-50 backdrop-blur-sm transition-opacity',
         className
       )}
       {...props}
@@ -137,8 +137,8 @@ export const AlertDialogContent = React.forwardRef<
       <RadixAlertDialog.Content
         ref={forwardedRef}
         className={cn(
-          'fixed z-50 grid w-full max-w-lg scale-100 gap-4 bg-base-lo p-6 opacity-100 animate-in fade-in-90 slide-in-from-bottom-10',
-          'sm:rounded-lg sm:zoom-in-90 sm:slide-in-from-bottom-0',
+          'bg-base-lo animate-in fade-in-90 slide-in-from-bottom-10 fixed z-50 grid w-full max-w-lg scale-100 gap-4 p-6 opacity-100',
+          'sm:zoom-in-90 sm:slide-in-from-bottom-0 sm:rounded-lg',
           className
         )}
         {...props}
@@ -241,9 +241,9 @@ export const AlertDialogAction = React.forwardRef<
     <RadixAlertDialog.Action
       ref={forwardedRef}
       className={cn(
-        'inline-flex h-10 items-center justify-center rounded-md bg-base-hi py-2 px-4 text-label4Bold text-base-lo transition-colors',
+        'bg-base-hi text-label4Bold text-base-lo inline-flex h-10 items-center justify-center rounded-md py-2 px-4 transition-colors',
         'hover:bg-base-weak',
-        'focus:outline-none focus:ring-2 focus:ring-base-7 focus:ring-offset-2',
+        'focus:ring-base-7 focus:outline-none focus:ring-2 focus:ring-offset-2',
         'disabled:cursor-not-allowed disabled:opacity-50',
         className
       )}
@@ -271,10 +271,10 @@ export const AlertDialogCancel = React.forwardRef<
     <RadixAlertDialog.Cancel
       ref={forwardedRef}
       className={cn(
-        'mt-2 inline-flex h-10 items-center justify-center rounded-md border border-base-7 bg-transparent py-2 px-4 text-label4Bold text-base-hi transition-colors',
+        'border-base-7 text-label4Bold text-base-hi mt-2 inline-flex h-10 items-center justify-center rounded-md border bg-transparent py-2 px-4 transition-colors',
         'sm:mt-0',
         'hover:bg-base-3',
-        'focus:outline-none focus:ring-2 focus:ring-base-7 focus:ring-offset-2',
+        'focus:ring-base-7 focus:outline-none focus:ring-2 focus:ring-offset-2',
         'disabled:cursor-not-allowed disabled:opacity-50',
         className
       )}

@@ -140,6 +140,13 @@ module.exports = {
             fontWeight: vars.$semantic.typography.bodyRelaxed2Bold.fontWeight,
           },
         ],
+        bodyRelaxed3Bold: [
+          vars.$semantic.typography.bodyRelaxed3Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.bodyRelaxed3Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.bodyRelaxed3Bold.fontWeight,
+          },
+        ],
         bodyNormal1Bold: [
           vars.$semantic.typography.bodyNormal1Bold.fontSize,
           {
@@ -152,6 +159,13 @@ module.exports = {
           {
             lineHeight: vars.$semantic.typography.bodyNormal2Bold.lineHeight,
             fontWeight: vars.$semantic.typography.bodyNormal2Bold.fontWeight,
+          },
+        ],
+        bodyNormal3Bold: [
+          vars.$semantic.typography.bodyNormal3Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.bodyNormal3Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.bodyNormal3Bold.fontWeight,
           },
         ],
         bodySnug1Bold: [
@@ -168,6 +182,13 @@ module.exports = {
             fontWeight: vars.$semantic.typography.bodySnug2Bold.fontWeight,
           },
         ],
+        bodySnug3Bold: [
+          vars.$semantic.typography.bodySnug3Bold.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.bodySnug3Bold.lineHeight,
+            fontWeight: vars.$semantic.typography.bodySnug3Bold.fontWeight,
+          },
+        ],
         bodyRelaxed1Regular: [
           vars.$semantic.typography.bodyRelaxed1Regular.fontSize,
           {
@@ -180,6 +201,13 @@ module.exports = {
           {
             lineHeight: vars.$semantic.typography.bodyRelaxed2Regular.lineHeight,
             fontWeight: vars.$semantic.typography.bodyRelaxed2Regular.fontWeight,
+          },
+        ],
+        bodyRelaxed3Regular: [
+          vars.$semantic.typography.bodyRelaxed3Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.bodyRelaxed3Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.bodyRelaxed3Regular.fontWeight,
           },
         ],
         bodyNormal1Regular: [
@@ -196,6 +224,13 @@ module.exports = {
             fontWeight: vars.$semantic.typography.bodyNormal2Regular.fontWeight,
           },
         ],
+        bodyNormal3Regular: [
+          vars.$semantic.typography.bodyNormal3Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.bodyNormal3Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.bodyNormal3Regular.fontWeight,
+          },
+        ],
         bodySnug1Regular: [
           vars.$semantic.typography.bodySnug1Regular.fontSize,
           {
@@ -208,6 +243,13 @@ module.exports = {
           {
             lineHeight: vars.$semantic.typography.bodySnug2Regular.lineHeight,
             fontWeight: vars.$semantic.typography.bodySnug2Regular.fontWeight,
+          },
+        ],
+        bodySnug3Regular: [
+          vars.$semantic.typography.bodySnug3Regular.fontSize,
+          {
+            lineHeight: vars.$semantic.typography.bodySnug3Regular.lineHeight,
+            fontWeight: vars.$semantic.typography.bodySnug3Regular.fontWeight,
           },
         ],
         caption1Bold: [
@@ -474,6 +516,9 @@ module.exports = {
           '0%': { transform: 'translateY(var(--radix-toast-swipe-end-y))' },
           '100%': { transform: 'translateY(calc(-1 * (100% + 1rem)))' },
         },
+      },
+      boxShadow: {
+        'outline-top-blur': '0 -5px 10px 0 rgb(0 0 0 / 2%)',
       },
     },
   },

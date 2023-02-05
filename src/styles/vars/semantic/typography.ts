@@ -275,6 +275,11 @@ export const bodyRelaxed2Bold = Object.freeze({
   lineHeight: $scale.typography.lineHeightRelaxed,
   fontWeight: weightBold,
 });
+export const bodyRelaxed3Bold = Object.freeze({
+  fontSize: $scale.typography.fontSize1,
+  lineHeight: $scale.typography.lineHeightRelaxed,
+  fontWeight: weightBold,
+});
 export const bodyNormal1Bold = Object.freeze({
   fontSize: $scale.typography.fontSize3,
   lineHeight: $scale.typography.lineHeightNormal,
@@ -282,6 +287,11 @@ export const bodyNormal1Bold = Object.freeze({
 });
 export const bodyNormal2Bold = Object.freeze({
   fontSize: $scale.typography.fontSize2,
+  lineHeight: $scale.typography.lineHeightNormal,
+  fontWeight: weightBold,
+});
+export const bodyNormal3Bold = Object.freeze({
+  fontSize: $scale.typography.fontSize1,
   lineHeight: $scale.typography.lineHeightNormal,
   fontWeight: weightBold,
 });
@@ -295,6 +305,11 @@ export const bodySnug2Bold = Object.freeze({
   lineHeight: $scale.typography.lineHeightSnug,
   fontWeight: weightBold,
 });
+export const bodySnug3Bold = Object.freeze({
+  fontSize: $scale.typography.fontSize1,
+  lineHeight: $scale.typography.lineHeightSnug,
+  fontWeight: weightBold,
+});
 export const bodyRelaxed1Regular = Object.freeze({
   fontSize: $scale.typography.fontSize3,
   lineHeight: $scale.typography.lineHeightRelaxed,
@@ -302,6 +317,11 @@ export const bodyRelaxed1Regular = Object.freeze({
 });
 export const bodyRelaxed2Regular = Object.freeze({
   fontSize: $scale.typography.fontSize2,
+  lineHeight: $scale.typography.lineHeightRelaxed,
+  fontWeight: weightRegular,
+});
+export const bodyRelaxed3Regular = Object.freeze({
+  fontSize: $scale.typography.fontSize1,
   lineHeight: $scale.typography.lineHeightRelaxed,
   fontWeight: weightRegular,
 });
@@ -315,6 +335,11 @@ export const bodyNormal2Regular = Object.freeze({
   lineHeight: $scale.typography.lineHeightNormal,
   fontWeight: weightRegular,
 });
+export const bodyNormal3Regular = Object.freeze({
+  fontSize: $scale.typography.fontSize1,
+  lineHeight: $scale.typography.lineHeightNormal,
+  fontWeight: weightRegular,
+});
 export const bodySnug1Regular = Object.freeze({
   fontSize: $scale.typography.fontSize3,
   lineHeight: $scale.typography.lineHeightSnug,
@@ -322,6 +347,11 @@ export const bodySnug1Regular = Object.freeze({
 });
 export const bodySnug2Regular = Object.freeze({
   fontSize: $scale.typography.fontSize2,
+  lineHeight: $scale.typography.lineHeightSnug,
+  fontWeight: weightRegular,
+});
+export const bodySnug3Regular = Object.freeze({
+  fontSize: $scale.typography.fontSize1,
   lineHeight: $scale.typography.lineHeightSnug,
   fontWeight: weightRegular,
 });

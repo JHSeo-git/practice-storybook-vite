@@ -79,8 +79,8 @@ export const SelectTrigger = React.forwardRef<
     <RadixSelect.Trigger
       ref={forwardedRef}
       className={cn(
-        'flex h-10 w-full items-center justify-between rounded-md border border-base-7 bg-transparent py-2 px-3 text-label4Regular placeholder:text-base-9',
-        'focus:outline-none focus:ring-2 focus:ring-base-7 focus:ring-offset-2',
+        'border-base-7 text-label4Regular placeholder:text-base-9 flex h-10 w-full items-center justify-between rounded-md border bg-transparent py-2 px-3',
+        'focus:ring-base-7 focus:outline-none focus:ring-2 focus:ring-offset-2',
         'disabled:cursor-not-allowed disabled:opacity-50',
         className
       )}
@@ -108,7 +108,7 @@ export const SelectContent = React.forwardRef<
       <RadixSelect.Content
         ref={forwardedRef}
         className={cn(
-          'relative z-50 min-w-[8rem] overflow-hidden rounded-md border border-base-6 bg-white text-base-weak shadow-md animate-in fade-in-80',
+          'border-base-6 text-base-weak animate-in fade-in-80 relative z-50 min-w-[8rem] overflow-hidden rounded-md border bg-white shadow-md',
           className
         )}
         {...props}
@@ -133,7 +133,7 @@ export const SelectLabel = React.forwardRef<
   return (
     <RadixSelect.Label
       ref={forwardedRef}
-      className={cn('py-1.5 pr-2 pl-8 text-label4Bold text-base-hi', className)}
+      className={cn('text-label4Bold text-base-hi py-1.5 pr-2 pl-8', className)}
       {...props}
     />
   );
@@ -154,8 +154,8 @@ export const SelectItem = React.forwardRef<
     <RadixSelect.Item
       ref={forwardedRef}
       className={cn(
-        'relative flex cursor-default select-none items-center rounded-sm py-1.5 pr-2 pl-8 text-bodyNormal2Regular',
-        'outline-none focus:bg-base-2 data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+        'text-bodyNormal2Regular relative flex cursor-default select-none items-center rounded-sm py-1.5 pr-2 pl-8',
+        'focus:bg-base-2 outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
         className
       )}
       {...props}
@@ -185,7 +185,7 @@ export const SelectSeparator = React.forwardRef<
   return (
     <RadixSelect.Separator
       ref={forwardedRef}
-      className={cn('-mx-1 my-1 h-px bg-base-2', className)}
+      className={cn('bg-base-2 -mx-1 my-1 h-px', className)}
       {...props}
     />
   );

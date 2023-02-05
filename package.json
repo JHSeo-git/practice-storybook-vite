@@ -37,6 +37,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@faker-js/faker": "^7.6.0",
+    "@mui/material": "^5.11.7",
+    "@mui/x-data-grid": "^5.17.22",
     "@radix-ui/react-alert-dialog": "^1.0.2",
     "@radix-ui/react-aspect-ratio": "^1.0.1",
     "@radix-ui/react-avatar": "^1.0.1",
@@ -105,6 +110,10 @@
     "vite-tsconfig-paths": "^4.0.5"
   },
   "peerDependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.7",
+    "@mui/x-data-grid": "^5.17.22",
     "@radix-ui/react-alert-dialog": "^1.0.2",
     "@radix-ui/react-aspect-ratio": "^1.0.1",
     "@radix-ui/react-avatar": "^1.0.1",

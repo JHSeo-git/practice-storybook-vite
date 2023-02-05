@@ -123,7 +123,7 @@ export const DropdownMenuSubTrigger = React.forwardRef<
     <RadixDropdownMenu.SubTrigger
       ref={forwardedRef}
       className={cn(
-        'flex cursor-default select-none items-center rounded-sm py-1.5 px-2 text-label4Regular outline-none',
+        'text-label4Regular flex cursor-default select-none items-center rounded-sm py-1.5 px-2 outline-none',
         'focus:bg-base-3',
         'data-[state=open]:bg-base-3',
         inset && 'pl-8',
@@ -221,7 +221,7 @@ export const DropdownMenuSubContent = React.forwardRef<
     <RadixDropdownMenu.SubContent
       ref={forwardedRef}
       className={cn(
-        'z-50 min-w-[8rem] overflow-hidden rounded-md border border-base-7 bg-base-lo p-1 text-base-weak shadow-md animate-in slide-in-from-left-1',
+        'border-base-7 bg-base-lo text-base-weak animate-in slide-in-from-left-1 z-50 min-w-[8rem] overflow-hidden rounded-md border p-1 shadow-md',
         className
       )}
       {...props}
@@ -331,7 +331,7 @@ export const DropdownMenuContent = React.forwardRef<
         ref={forwardedRef}
         sideOffset={sideOffset}
         className={cn(
-          'z-50 min-w-[8rem] overflow-hidden rounded-md border border-base-7 bg-base-lo p-1 text-base-weak shadow-md animate-in',
+          'border-base-7 bg-base-lo text-base-weak animate-in z-50 min-w-[8rem] overflow-hidden rounded-md border p-1 shadow-md',
           'data-[side=bottom]:slide-in-from-top-2 data-[side=top]:slide-in-from-bottom-2',
           className
         )}
@@ -373,7 +373,7 @@ export const DropdownMenuItem = React.forwardRef<
     <RadixDropdownMenu.DropdownMenuItem
       ref={forwardedRef}
       className={cn(
-        'relative flex cursor-default select-none items-center rounded-sm py-1.5 px-2 text-label4Regular outline-none',
+        'text-label4Regular relative flex cursor-default select-none items-center rounded-sm py-1.5 px-2 outline-none',
         'focus:bg-base-3',
         'data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
         inset && 'pl-8',
@@ -421,7 +421,7 @@ export const DropdownMenuCheckboxItem = React.forwardRef<
     <RadixDropdownMenu.DropdownMenuCheckboxItem
       ref={forwardedRef}
       className={cn(
-        'relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-label4Regular outline-none',
+        'text-label4Regular relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 outline-none',
         'focus:bg-base-3',
         'data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
         className
@@ -470,7 +470,7 @@ export const DropdownMenuRadioItem = React.forwardRef<
     <RadixDropdownMenu.DropdownMenuRadioItem
       ref={forwardedRef}
       className={cn(
-        'relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-label4Regular outline-none',
+        'text-label4Regular relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 outline-none',
         'focus:bg-base-3',
         'data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
         className
@@ -529,7 +529,7 @@ export const DropdownMenuLabel = React.forwardRef<
   return (
     <RadixDropdownMenu.DropdownMenuLabel
       ref={forwardedRef}
-      className={cn('px-2 py-1.5 text-label4Bold text-base-hi', inset && 'pl-8', className)}
+      className={cn('text-label4Bold text-base-hi px-2 py-1.5', inset && 'pl-8', className)}
       {...props}
     />
   );
@@ -550,7 +550,7 @@ export const DropdownMenuSeparator = React.forwardRef<
   return (
     <RadixDropdownMenu.DropdownMenuSeparator
       ref={forwardedRef}
-      className={cn('-mx-1 my-1 h-px bg-base-7', className)}
+      className={cn('bg-base-7 -mx-1 my-1 h-px', className)}
       {...props}
     />
   );
@@ -566,7 +566,7 @@ interface DropdownMenuShortcutProps extends React.HTMLAttributes<HTMLSpanElement
 export const DropdownMenuShortcut = ({ className, ...props }: DropdownMenuShortcutProps) => {
   return (
     <span
-      className={cn('ml-auto text-label5Regular tracking-widest text-base-9', className)}
+      className={cn('text-label5Regular text-base-9 ml-auto tracking-widest', className)}
       {...props}
     />
   );

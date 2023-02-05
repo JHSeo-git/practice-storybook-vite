@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.bodyRelaxed2Regular = exports.bodyRelaxed1Regular = exports.bodySnug2Bold = exports.bodySnug1Bold = exports.bodyNormal2Bold = exports.bodyNormal1Bold = exports.bodyRelaxed2Bold = exports.bodyRelaxed1Bold = exports.subtitle2Regular = exports.subtitle1Regular = exports.subtitle2Bold = exports.subtitle1Bold = exports.title3Regular = exports.title2Regular = exports.title1Regular = exports.title3Bold = exports.title2Bold = exports.title1Bold = exports.h6 = exports.h5 = exports.h4 = exports.h3 = exports.h2 = exports.h1 = exports.text9XLarge = exports.text8XLarge = exports.text7XLarge = exports.text6XLarge = exports.text5XLarge = exports.text4XLarge = exports.text3XLarge = exports.text2XLarge = exports.textXLarge = exports.textLarge = exports.textBase = exports.textSmall = exports.textXSmall = exports.letterSpacingWidest = exports.letterSpacingWider = exports.letterSpacingWide = exports.letterSpacingNormal = exports.letterSpacingTight = exports.letterSpacingTighter = exports.letterSpacingTightest = exports.weightBold = exports.weightSemiBold = exports.weightMedium = exports.weightRegular = exports.weightLight = exports.fontFamilySans = void 0;
-exports.label6Regular = exports.label5Regular = exports.label4Regular = exports.label3Regular = exports.label2Regular = exports.label1Regular = exports.label6Bold = exports.label5Bold = exports.label4Bold = exports.label3Bold = exports.label2Bold = exports.label1Bold = exports.caption2Regular = exports.caption1Regular = exports.caption2Bold = exports.caption1Bold = exports.bodySnug2Regular = exports.bodySnug1Regular = exports.bodyNormal2Regular = exports.bodyNormal1Regular = void 0;
+exports.bodySnug2Bold = exports.bodySnug1Bold = exports.bodyNormal3Bold = exports.bodyNormal2Bold = exports.bodyNormal1Bold = exports.bodyRelaxed3Bold = exports.bodyRelaxed2Bold = exports.bodyRelaxed1Bold = exports.subtitle2Regular = exports.subtitle1Regular = exports.subtitle2Bold = exports.subtitle1Bold = exports.title3Regular = exports.title2Regular = exports.title1Regular = exports.title3Bold = exports.title2Bold = exports.title1Bold = exports.h6 = exports.h5 = exports.h4 = exports.h3 = exports.h2 = exports.h1 = exports.text9XLarge = exports.text8XLarge = exports.text7XLarge = exports.text6XLarge = exports.text5XLarge = exports.text4XLarge = exports.text3XLarge = exports.text2XLarge = exports.textXLarge = exports.textLarge = exports.textBase = exports.textSmall = exports.textXSmall = exports.letterSpacingWidest = exports.letterSpacingWider = exports.letterSpacingWide = exports.letterSpacingNormal = exports.letterSpacingTight = exports.letterSpacingTighter = exports.letterSpacingTightest = exports.weightBold = exports.weightSemiBold = exports.weightMedium = exports.weightRegular = exports.weightLight = exports.fontFamilySans = void 0;
+exports.label6Regular = exports.label5Regular = exports.label4Regular = exports.label3Regular = exports.label2Regular = exports.label1Regular = exports.label6Bold = exports.label5Bold = exports.label4Bold = exports.label3Bold = exports.label2Bold = exports.label1Bold = exports.caption2Regular = exports.caption1Regular = exports.caption2Bold = exports.caption1Bold = exports.bodySnug3Regular = exports.bodySnug2Regular = exports.bodySnug1Regular = exports.bodyNormal3Regular = exports.bodyNormal2Regular = exports.bodyNormal1Regular = exports.bodyRelaxed3Regular = exports.bodyRelaxed2Regular = exports.bodyRelaxed1Regular = exports.bodySnug3Bold = void 0;
 const __1 = require("..");
 // font family
 exports.fontFamilySans = __1.$scale.typography.fontFamilyNotoSansKR;
@@ -252,6 +252,11 @@ exports.bodyRelaxed2Bold = Object.freeze({
     lineHeight: __1.$scale.typography.lineHeightRelaxed,
     fontWeight: exports.weightBold,
 });
+exports.bodyRelaxed3Bold = Object.freeze({
+    fontSize: __1.$scale.typography.fontSize1,
+    lineHeight: __1.$scale.typography.lineHeightRelaxed,
+    fontWeight: exports.weightBold,
+});
 exports.bodyNormal1Bold = Object.freeze({
     fontSize: __1.$scale.typography.fontSize3,
     lineHeight: __1.$scale.typography.lineHeightNormal,
@@ -259,6 +264,11 @@ exports.bodyNormal1Bold = Object.freeze({
 });
 exports.bodyNormal2Bold = Object.freeze({
     fontSize: __1.$scale.typography.fontSize2,
+    lineHeight: __1.$scale.typography.lineHeightNormal,
+    fontWeight: exports.weightBold,
+});
+exports.bodyNormal3Bold = Object.freeze({
+    fontSize: __1.$scale.typography.fontSize1,
     lineHeight: __1.$scale.typography.lineHeightNormal,
     fontWeight: exports.weightBold,
 });
@@ -272,6 +282,11 @@ exports.bodySnug2Bold = Object.freeze({
     lineHeight: __1.$scale.typography.lineHeightSnug,
     fontWeight: exports.weightBold,
 });
+exports.bodySnug3Bold = Object.freeze({
+    fontSize: __1.$scale.typography.fontSize1,
+    lineHeight: __1.$scale.typography.lineHeightSnug,
+    fontWeight: exports.weightBold,
+});
 exports.bodyRelaxed1Regular = Object.freeze({
     fontSize: __1.$scale.typography.fontSize3,
     lineHeight: __1.$scale.typography.lineHeightRelaxed,
@@ -279,6 +294,11 @@ exports.bodyRelaxed1Regular = Object.freeze({
 });
 exports.bodyRelaxed2Regular = Object.freeze({
     fontSize: __1.$scale.typography.fontSize2,
+    lineHeight: __1.$scale.typography.lineHeightRelaxed,
+    fontWeight: exports.weightRegular,
+});
+exports.bodyRelaxed3Regular = Object.freeze({
+    fontSize: __1.$scale.typography.fontSize1,
     lineHeight: __1.$scale.typography.lineHeightRelaxed,
     fontWeight: exports.weightRegular,
 });
@@ -292,6 +312,11 @@ exports.bodyNormal2Regular = Object.freeze({
     lineHeight: __1.$scale.typography.lineHeightNormal,
     fontWeight: exports.weightRegular,
 });
+exports.bodyNormal3Regular = Object.freeze({
+    fontSize: __1.$scale.typography.fontSize1,
+    lineHeight: __1.$scale.typography.lineHeightNormal,
+    fontWeight: exports.weightRegular,
+});
 exports.bodySnug1Regular = Object.freeze({
     fontSize: __1.$scale.typography.fontSize3,
     lineHeight: __1.$scale.typography.lineHeightSnug,
@@ -299,6 +324,11 @@ exports.bodySnug1Regular = Object.freeze({
 });
 exports.bodySnug2Regular = Object.freeze({
     fontSize: __1.$scale.typography.fontSize2,
+    lineHeight: __1.$scale.typography.lineHeightSnug,
+    fontWeight: exports.weightRegular,
+});
+exports.bodySnug3Regular = Object.freeze({
+    fontSize: __1.$scale.typography.fontSize1,
     lineHeight: __1.$scale.typography.lineHeightSnug,
     fontWeight: exports.weightRegular,
 });

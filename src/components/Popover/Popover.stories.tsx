@@ -63,7 +63,7 @@ export const Template: ComponentStory<typeof Popover> = (args) => {
               </div>
             </div>
           </div>
-          <PopoverClose className="absolute top-4 right-4 rounded-full p-1 hover:bg-base-3">
+          <PopoverClose className="hover:bg-base-3 absolute top-4 right-4 rounded-full p-1">
             <X className="h-4 w-4" />
           </PopoverClose>
         </PopoverContent>

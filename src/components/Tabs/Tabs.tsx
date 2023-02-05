@@ -75,7 +75,7 @@ export const TabsList = React.forwardRef<React.ElementRef<typeof RadixTabs.List>
       <RadixTabs.List
         ref={forwardedRef}
         className={cn(
-          'inline-flex items-center justify-center rounded-md bg-base-3 p-1',
+          'bg-base-3 inline-flex items-center justify-center rounded-md p-1',
           className
         )}
         {...props}
@@ -113,7 +113,7 @@ export const TabsTrigger = React.forwardRef<
     <RadixTabs.Trigger
       ref={forwardedRef}
       className={cn(
-        'inline-flex min-w-[100px] items-center justify-center rounded-[0.185rem] px-3 py-1.5 text-label4Regular text-base-weak transition-all',
+        'text-label4Regular text-base-weak inline-flex min-w-[100px] items-center justify-center rounded-[0.185rem] px-3 py-1.5 transition-all',
         'disabled:pointer-events-none disabled:opacity-50',
         'data-[state=active]:bg-base-lo data-[state=active]:text-base-hi data-[state=active]:shadow-sm',
         className
@@ -150,7 +150,7 @@ export const TabsContent = React.forwardRef<
   return (
     <RadixTabs.Content
       ref={forwardedRef}
-      className={cn('rounded-md border border-base-7 p-6', className)}
+      className={cn('border-base-7 rounded-md border p-6', className)}
       {...props}
     />
   );

@@ -19,10 +19,6 @@ export const Template: ComponentStory<typeof DatePicker> = (args) => {
             weekday: 'short',
             monthName: '2-digit',
           },
-          years: {
-            mode: 'decade',
-            step: 10,
-          },
         }}
       >
         <div className="relative">
