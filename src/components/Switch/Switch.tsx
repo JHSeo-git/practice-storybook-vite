@@ -40,26 +40,38 @@ interface SwitchProps extends RadixSwitch.SwitchProps {
    * Change the component to the HTML tag or custom component of the only child. This will merge the original component props with the props of the supplied element/component and change the underlying DOM node.
    */
   asChild?: RadixSwitch.SwitchProps['asChild'];
+  /**
+   * size of the switch
+   * @default "md"
+   */
+  size?: 'small' | 'medium';
 }
 
 export const Switch = React.forwardRef<React.ElementRef<typeof RadixSwitch.Root>, SwitchProps>(
-  ({ className, ...props }, forwardedRef) => {
+  ({ className, size = 'medium', ...props }, forwardedRef) => {
     return (
       <RadixSwitch.Root
         ref={forwardedRef}
         className={cn(
-          'peer inline-flex h-[24px] w-[44px] shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors',
-          'focus:outline-none focus:ring-2 focus:ring-base-7 focus:ring-offset-2',
+          'peer inline-flex shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors',
+          'focus:ring-base-7 focus:outline-none focus:ring-2 focus:ring-offset-2',
           'disabled:cursor-not-allowed disabled:opacity-50',
-          'data-[state=unchecked]:bg-base-6 data-[state=checked]:bg-primary-base',
+          'data-[state=unchecked]:bg-base-6',
+          'data-[state=checked]:bg-primary-base',
+          size === 'medium' && 'h-[24px] w-[44px]',
+          size === 'small' && 'h-[16px] w-[32px]',
           className
         )}
         {...props}
       >
         <RadixSwitch.Thumb
           className={cn(
-            'pointer-events-none block h-5 w-5 rounded-full bg-white shadow-lg ring-0 transition-transform',
-            'data-[state=unchecked]:translate-x-0 data-[state=checked]:translate-x-5'
+            'pointer-events-none block rounded-full bg-white shadow-lg ring-0 transition-transform',
+            'data-[state=unchecked]:translate-x-0',
+            size === 'medium' && 'h-5 w-5',
+            size === 'medium' && 'data-[state=checked]:translate-x-5',
+            size === 'small' && 'h-3 w-3',
+            size === 'small' && 'data-[state=checked]:translate-x-4'
           )}
         />
       </RadixSwitch.Root>
