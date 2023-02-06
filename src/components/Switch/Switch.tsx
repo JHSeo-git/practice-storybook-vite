@@ -54,7 +54,7 @@ export const Switch = React.forwardRef<React.ElementRef<typeof RadixSwitch.Root>
         ref={forwardedRef}
         className={cn(
           'peer inline-flex shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors',
-          'focus:ring-base-7 focus:outline-none focus:ring-2 focus:ring-offset-2',
+          'focus:outline-none focus:ring-2 focus:ring-base-7 focus:ring-offset-2',
           'disabled:cursor-not-allowed disabled:opacity-50',
           'data-[state=unchecked]:bg-base-6',
           'data-[state=checked]:bg-primary-base',

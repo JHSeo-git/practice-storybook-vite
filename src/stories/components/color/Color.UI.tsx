@@ -4,7 +4,7 @@ export function ScaleLabel({ length, hasEmptyHead }: { length: number; hasEmptyH
       {hasEmptyHead && <ColorBlockTitle />}
       {Array.from({ length }).map((_, index) => (
         <div key={index + 1} className="flex-1">
-          <p className="text-base-weak my-1 text-center text-sm tabular-nums">{index + 1}</p>
+          <p className="my-1 text-center text-sm tabular-nums text-base-weak">{index + 1}</p>
         </div>
       ))}
     </div>
@@ -12,7 +12,7 @@ export function ScaleLabel({ length, hasEmptyHead }: { length: number; hasEmptyH
 }
 
 export function Title({ children }: { children: React.ReactNode }) {
-  return <h3 className="text-base-hi mt-10 mb-1 text-lg">{children}</h3>;
+  return <h3 className="mt-10 mb-1 text-lg text-base-hi">{children}</h3>;
 }
 
 export function ColorBlockWrapper({ children }: { children: React.ReactNode }) {
@@ -22,7 +22,7 @@ export function ColorBlockWrapper({ children }: { children: React.ReactNode }) {
 export function ColorBlockTitle({ text }: { text?: string }) {
   return (
     <div className="flex w-20 items-center">
-      {text && <p className="text-base-weak text-sm">{text}</p>}
+      {text && <p className="text-sm text-base-weak">{text}</p>}
     </div>
   );
 }

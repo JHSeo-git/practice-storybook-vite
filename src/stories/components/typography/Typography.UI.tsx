@@ -18,7 +18,7 @@ export function TypographyRow({
 }) {
   return (
     <div className="flex flex-nowrap items-center gap-2">
-      <p className="text-base-hi w-36 text-xs font-bold">{label}</p>
+      <p className="w-36 text-xs font-bold text-base-hi">{label}</p>
       <div className="min-w-0 flex-1">
         <p
           className="min-w-0 truncate bg-gray-100"

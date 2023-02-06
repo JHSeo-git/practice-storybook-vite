@@ -79,7 +79,7 @@ export const AvatarFallback = React.forwardRef<
     <RadixAvatar.Fallback
       ref={forwardedRef}
       className={cn(
-        'bg-base-3 flex h-full w-full items-center justify-center rounded-full',
+        'flex h-full w-full items-center justify-center rounded-full bg-base-3',
         className
       )}
       {...props}

@@ -445,7 +445,7 @@ const PaginationBaseButton = React.forwardRef<
     <button
       ref={forwardedRef}
       className={cn(
-        'bg-base-lo text-label4Regular mx-1 flex h-8 w-8 items-center justify-center rounded-md transition-colors',
+        'mx-1 flex h-8 w-8 items-center justify-center rounded-md bg-base-lo text-label4Regular transition-colors',
         'hover:bg-base-3',
         'disabled:cursor-not-allowed disabled:opacity-40',
         className
@@ -496,7 +496,7 @@ const CustomPagination = () => {
       {items.map(({ page, type, selected, ...item }, index) => (
         <li key={`pagination-button-${index}`}>
           {type === 'start-ellipsis' || type === 'end-ellipsis' ? (
-            <div className="bg-base-lo text-base-weak mx-1 flex h-8 w-8 items-center justify-center">
+            <div className="mx-1 flex h-8 w-8 items-center justify-center bg-base-lo text-base-weak">
               <MoreHorizontal className="h-4 w-4" />
             </div>
           ) : (
@@ -526,7 +526,7 @@ const CustomFooter = () => {
   }
 
   return (
-    <div className="shadow-outline-top-blur flex items-center justify-between p-2">
+    <div className="flex items-center justify-between p-2 shadow-outline-top-blur">
       <CustomPageSizeSelector />
       <CustomPagination />
     </div>

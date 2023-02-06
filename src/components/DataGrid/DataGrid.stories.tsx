@@ -6,7 +6,7 @@ import { DataGrid } from './DataGrid';
 import { columns, rows } from './DataGrid.sample';
 
 const DataGridContainer = ({ children }: { children: React.ReactNode }) => {
-  return <div className="text-base-hi h-80 w-full">{children}</div>;
+  return <div className="h-80 w-full text-base-hi">{children}</div>;
 };
 
 export default {

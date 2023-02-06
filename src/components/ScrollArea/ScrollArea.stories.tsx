@@ -15,9 +15,9 @@ export default {
 export const Template: ComponentStory<typeof ScrollArea> = (args) => {
   return (
     <StoryContainer>
-      <ScrollArea {...args} className="border-base-7 h-72 w-48 rounded-md border shadow-sm">
+      <ScrollArea {...args} className="h-72 w-48 rounded-md border border-base-7 shadow-sm">
         <div className="p-4">
-          <h4 className="text-subtitle2Bold mb-4">Tags</h4>
+          <h4 className="mb-4 text-subtitle2Bold">Tags</h4>
           {TAGS.map((tag) => (
             <>
               <div key={tag} className="text-bodyNormal2Regular">

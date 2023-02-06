@@ -85,7 +85,7 @@ export const ScrollBar = React.forwardRef<
       orientation={orientation}
       {...props}
     >
-      <RadixScrollArea.ScrollAreaThumb className="bg-base-7 relative flex-1 rounded-full" />
+      <RadixScrollArea.ScrollAreaThumb className="relative flex-1 rounded-full bg-base-7" />
     </RadixScrollArea.Scrollbar>
   );
 });

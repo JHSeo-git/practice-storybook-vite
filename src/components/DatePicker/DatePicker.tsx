@@ -170,8 +170,8 @@ export const DatePickerBaseInput = React.forwardRef<HTMLInputElement, DatePicker
         <input
           ref={forwardedRef}
           className={cn(
-            'border-base-7 text-label4Regular placeholder:text-base-9 flex h-10 w-full rounded-md border py-2 pl-3 pr-8',
-            'focus:ring-base-7 focus:outline-none focus:ring-2 focus:ring-offset-2',
+            'flex h-10 w-full rounded-md border border-base-7 py-2 pl-3 pr-8 text-label4Regular placeholder:text-base-9',
+            'focus:outline-none focus:ring-2 focus:ring-base-7 focus:ring-offset-2',
             'disabled:cursor-not-allowed disabled:opacity-50',
             className
           )}
@@ -179,7 +179,7 @@ export const DatePickerBaseInput = React.forwardRef<HTMLInputElement, DatePicker
         />
         <button
           type="button"
-          className="hover:bg-base-3 absolute top-1/2 right-2.5 -translate-y-1/2 rounded-md p-1"
+          className="absolute top-1/2 right-2.5 -translate-y-1/2 rounded-md p-1 hover:bg-base-3"
           onClick={onOpenToggle}
         >
           <CalendarIcon className=" h-4 w-4 " />
@@ -290,7 +290,7 @@ export const DatePickerContent = React.forwardRef<
         ref={forwardedRef}
         className={cn(
           'w-80',
-          'border-base-7 bg-base-lo animate-in z-50 rounded-md border p-4 shadow-md outline-none',
+          'z-50 rounded-md border border-base-7 bg-base-lo p-4 shadow-md outline-none animate-in',
           'data-[side=bottom]:slide-in-from-top-2 data-[side=top]:slide-in-from-bottom-2',
           'data-[state=closed]:animate-hide',
           className
@@ -334,7 +334,7 @@ const CalendarBaseButton = React.forwardRef<HTMLButtonElement, CalendarBaseButto
       <Comp
         ref={forwardedRef}
         className={cn(
-          'text-bodyNormal2Regular text-base-hi flex h-9 w-9 items-center justify-center rounded-md p-1 outline-none',
+          'flex h-9 w-9 items-center justify-center rounded-md p-1 text-bodyNormal2Regular text-base-hi outline-none',
           'hover:bg-base-3',
           'disabled:cursor-not-allowed disabled:opacity-50',
           className
@@ -390,7 +390,7 @@ const CalendarCellButton = React.forwardRef<
         )}
         {...props}
       />
-      {now && <div className="bg-danger-base absolute top-0 right-0 h-1.5 w-1.5 rounded-full" />}
+      {now && <div className="absolute top-0 right-0 h-1.5 w-1.5 rounded-full bg-danger-base" />}
     </div>
   );
 });
@@ -496,19 +496,19 @@ const CalendarFooter = () => {
 
   return (
     <div className="flex items-center justify-between">
-      <CalendarBaseButton className="text-label5Regular w-auto px-2" onClick={onClickToday}>
+      <CalendarBaseButton className="w-auto px-2 text-label5Regular" onClick={onClickToday}>
         Today
       </CalendarBaseButton>
       <div className="flex items-center space-x-4">
         {['months', 'years'].includes(calendarView) && (
           <CalendarBaseButton
-            className="text-label5Regular w-auto px-2"
+            className="w-auto px-2 text-label5Regular"
             onClick={onClickViewChange}
           >
             Back
           </CalendarBaseButton>
         )}
-        <CalendarBaseButton className="text-label5Regular w-auto px-2" onClick={onOpenToggle}>
+        <CalendarBaseButton className="w-auto px-2 text-label5Regular" onClick={onOpenToggle}>
           Close
         </CalendarBaseButton>
       </div>

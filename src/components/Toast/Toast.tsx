@@ -167,7 +167,7 @@ export const Toast = React.forwardRef<React.ElementRef<typeof RadixToast.Root>, 
       <RadixToast.Root
         ref={forwardedRef}
         className={cn(
-          'bg-base-lo rounded-md p-4 shadow-md',
+          'rounded-md bg-base-lo p-4 shadow-md',
           'data-[state=closed]:animate-hide',
           'data-[swipe=cancel]:transition-transform',
           'data-[swipe-direction=right]:data-[state=open]:animate-toast-slide-in-right',
@@ -268,9 +268,9 @@ export const ToastAction = React.forwardRef<
     <RadixToast.Action
       ref={forwardedRef}
       className={cn(
-        'bg-base-hi text-label5Bold text-base-lo inline-flex h-6 items-center justify-center rounded-md py-1 px-3 transition-colors',
+        'inline-flex h-6 items-center justify-center rounded-md bg-base-hi py-1 px-3 text-label5Bold text-base-lo transition-colors',
         'hover:bg-base-weak',
-        'focus:ring-base-7 focus:outline-none focus:ring-2 focus:ring-offset-2',
+        'focus:outline-none focus:ring-2 focus:ring-base-7 focus:ring-offset-2',
         'disabled:cursor-not-allowed disabled:opacity-50',
         className
       )}
@@ -299,10 +299,10 @@ export const ToastClose = React.forwardRef<
     <RadixToast.Close
       ref={forwardedRef}
       className={cn(
-        'border-base-7 text-label5Bold text-base-hi inline-flex h-6 items-center justify-center rounded-md border bg-transparent py-1 px-3 transition-colors',
+        'inline-flex h-6 items-center justify-center rounded-md border border-base-7 bg-transparent py-1 px-3 text-label5Bold text-base-hi transition-colors',
         'sm:mt-0',
         'hover:bg-base-3',
-        'focus:ring-base-7 focus:outline-none focus:ring-2 focus:ring-offset-2',
+        'focus:outline-none focus:ring-2 focus:ring-base-7 focus:ring-offset-2',
         'disabled:cursor-not-allowed disabled:opacity-50',
         className
       )}
