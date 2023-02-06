@@ -36,18 +36,6 @@ const config: StorybookViteConfig = {
     return mergeConfig(config, {
       build: {
         sourcemap: false,
-        rollupOptions: {
-          output: {
-            manualChunks: {
-              '@mui/material': ['@mui/material'],
-              '@mui/system': ['@mui/system'],
-              '@mui/x-data-grid': ['@mui/x-data-grid'],
-              '@emotion/react': ['@emotion/react'],
-              '@emotion/styled': ['@emotion/styled'],
-              react: ['react'],
-            },
-          },
-        },
       },
       plugins: [tsconfigPaths()],
       optimizeDeps: {
