@@ -1,0 +1,36 @@
+---
+title: Practice Design System Document
+---
+
+import Link from 'next/link';
+import cn from 'clsx';
+
+<div className={cn('max-w-7xl mx-auto px-6')}>
+  <h1
+    className={cn(
+      'font-bold text-6xl mt-14 leading-tight',
+      'text-transparent bg-clip-text bg-gradient-to-br from-black to-gray-500'
+    )}
+  >
+    Make beautiful websites <br className="sm:block hidden" />
+    with Practice Design System.
+  </h1>
+  <p className="mt-6 text-xl">
+    Simple, powerful and flexible site generation framework <br className="sm:block hidden" />
+    with everything you love.
+  </p>
+  <p className="mt-6">
+    <Link
+      className={cn(
+        'inline-flex items-center justify-center rounded-full shadow-sm select-none px-6 py-3 transition-all',
+        'font-bold text-lg',
+        'text-white bg-blue-600',
+        'hover:shadow-lg hover:brightness-105'
+      )}
+      href="/docs"
+    >
+      Get started <span>👉</span>
+    </Link>
+  </p>
+</div>
+<div className="flex-1" />
