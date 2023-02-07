@@ -4,33 +4,49 @@ title: Practice Design System Document
 
 import Link from 'next/link';
 import cn from 'clsx';
+import { Card } from '@components/Card';
+import { Feature } from '@components/Feature';
 
-<div className={cn('max-w-7xl mx-auto px-6')}>
-  <h1
-    className={cn(
-      'font-bold text-6xl mt-14 leading-tight',
-      'text-transparent bg-clip-text bg-gradient-to-br from-black to-gray-500'
-    )}
-  >
-    Make beautiful websites <br className="sm:block hidden" />
-    with Practice Design System.
-  </h1>
-  <p className="mt-6 text-xl">
-    Simple, powerful and flexible site generation framework <br className="sm:block hidden" />
-    with everything you love.
-  </p>
-  <p className="mt-6">
-    <Link
+<div>
+  <section className={cn('max-w-7xl mx-auto px-6')}>
+    <h1
       className={cn(
-        'inline-flex items-center justify-center rounded-full shadow-sm select-none px-6 py-3 transition-all',
-        'font-bold text-lg',
-        'text-white bg-blue-600',
-        'hover:shadow-lg hover:brightness-105'
+        'font-bold text-4xl mt-14 leading-tight',
+        'lg:text-6xl',
+        'text-transparent bg-clip-text bg-gradient-to-r from-black to-gray-500'
       )}
-      href="/docs"
     >
-      Get started <span>👉</span>
-    </Link>
-  </p>
+      Make beautiful websites <br className="sm:block hidden" />
+      with Practice Design System.
+    </h1>
+    <p className={cn('mt-6 text-lg', 'lg:text-xl')}>
+      Simple, powerful and flexible design system <br className="sm:block hidden" />
+      with everything you love.
+    </p>
+    <p className="mt-6">
+      <Link
+        className={cn(
+          'inline-flex items-center justify-center rounded-full shadow-sm select-none px-6 py-3 transition-all',
+          'font-bold text-lg',
+          'text-white bg-blue-500',
+          'hover:shadow-lg hover:brightness-105'
+        )}
+        href="/docs"
+      >
+        Get started <span>👉</span>
+      </Link>
+    </p>
+  </section>
+  <section className="max-w-7xl mx-auto px-6 mt-24 pt-12 pb-24 bg-gray-100 border-b border-b-gray-200">
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+      <Feature index={0} href="/docs">
+        <h3 className="text-lg font-bold">Document</h3>
+        <p>More documents.</p>
+      </Feature>
+      <Feature index={1} href="/docs">
+        <h3 className="text-lg font-bold">Design Token</h3>
+        <p>See the design token.</p>
+      </Feature>
+    </div>
+  </section>
 </div>
-<div className="flex-1" />

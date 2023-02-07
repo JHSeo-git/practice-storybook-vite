@@ -27,6 +27,7 @@
     "dev:storybook": "start-storybook -p 6006",
     "dev:tw": "tailwindcss -i ./src/styles/tailwind.css -o ./public/tailwind.css -w",
     "dev:vars": "nodemon --watch ./src/styles/vars --ext ts --exec \"yarn builz:vars\"",
+    "docs:dev": "cd docs && yarn dev",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
     "lib:build": "yarn build:tw && vite build -c vite.lib.config.ts",
     "lint": "eslint --fix ./src --ext .ts,.tsx,.js,.jsx --ignore-path .gitignore",
