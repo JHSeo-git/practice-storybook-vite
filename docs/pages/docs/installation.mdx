@@ -5,7 +5,7 @@ import { Callout, Tab, Tabs } from 'nextra-theme-docs';
 How to install this system.
 
 <Callout type="warning" emoji="⚠️">
-  This API will be deprecated soon.
+  This is not production ready. It is for practice only.
 </Callout>
 
 ## Git clone
@@ -19,6 +19,8 @@ git clone https://github.com/JHSeo-git/practice-storybook-vite
 ## Existing project
 
 If you already have a project, you can install Storybook in the following way.
+
+First, install Tailwind CSS.
 
 {/* prettier-ignore */}
 <Tabs items={['pnpm', 'npm', 'yarn']}>
@@ -35,6 +37,29 @@ If you already have a project, you can install Storybook in the following way.
   <Tab>
     ```bash
     yarn add -D tailwindcss postcss autoprefixer
+    ```
+  </Tab>
+</Tabs>
+
+### Add dependencies
+
+Next, install the following dependencies.
+
+{/* prettier-ignore */}
+<Tabs items={['pnpm', 'npm', 'yarn']}>
+  <Tab>
+    ```bash
+    pnpm add tailwindcss-animate class-variance-authority clsx tailwind-merge lucide-react
+    ```
+  </Tab>
+  <Tab>
+    ```bash
+    npm install tailwindcss-animate class-variance-authority clsx tailwind-merge lucide-react
+    ```
+  </Tab>
+  <Tab>
+    ```bash
+    yarn add tailwindcss-animate class-variance-authority clsx tailwind-merge lucide-react
     ```
   </Tab>
 </Tabs>

@@ -41,6 +41,7 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@faker-js/faker": "^7.6.0",
+    "@headlessui/react": "^1.7.10",
     "@mui/material": "^5.11.7",
     "@mui/x-data-grid": "^5.17.22",
     "@radix-ui/react-alert-dialog": "^1.0.2",
