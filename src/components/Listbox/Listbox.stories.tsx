@@ -26,7 +26,7 @@ export const Template: ComponentStory<typeof Listbox> = (args) => {
   );
 };
 Template.args = {
-  listboxOpen: true,
+  placeholder: 'Select a fruit',
   disabled: false,
 };
 Template.storyName = 'Default';

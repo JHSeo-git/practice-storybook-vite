@@ -26,7 +26,7 @@ export const Template: ComponentStory<typeof MultiListbox> = (args) => {
   );
 };
 Template.args = {
-  listboxOpen: true,
+  placeholder: 'Select fruits',
   disabled: false,
 };
 Template.storyName = 'Default';

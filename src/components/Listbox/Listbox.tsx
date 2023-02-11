@@ -80,6 +80,7 @@ const ListboxTrigger = React.forwardRef(function ListboxTrigger<TValue extends {
       className={cn(
         'flex h-10 w-full items-center justify-between rounded-md border border-base-7 bg-transparent py-2 px-3 text-label4Regular placeholder:text-base-9',
         'focus:outline-none focus:ring-2 focus:ring-base-7 focus:ring-offset-2',
+        '[&.Mui-focusVisible]:ring-2 [&.Mui-focusVisible]:ring-base-7 [&.Mui-focusVisible]:ring-offset-2',
         'disabled:cursor-not-allowed disabled:opacity-50',
         '[&.Mui-disabled]:cursor-not-allowed [&.Mui-disabled]:opacity-50',
         'space-x-2',
@@ -224,7 +225,7 @@ const MultiListbox = React.forwardRef(function MultiListbox<TValue extends {}>(
           <>
             {v?.length > 0
               ? v.map((vv) => vv.label).join(', ')
-              : props.placeholder || 'Select an option'}
+              : props.placeholder || 'Select options'}
           </>
         )}
       />
