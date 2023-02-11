@@ -6,7 +6,12 @@ module.exports = {
   future: {
     hoverOnlyWhenSupported: true,
   },
-  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
+  content: [
+    //
+    './index.html',
+    './src/**/*.{js,jsx,ts,tsx}',
+    '.storybook/**/*.{js,jsx,ts,tsx,html}',
+  ],
   darkMode: ['class'],
   theme: {
     extend: {

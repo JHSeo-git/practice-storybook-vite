@@ -24,7 +24,7 @@ const config: StorybookViteConfig = {
   features: {
     storyStoreV7: true,
   },
-  staticDirs: ['../public'],
+  staticDirs: ['../storybook-public'],
   /**
    * A option exposed by storybook-builder-vite for customising the Vite config.
    * @see https://github.com/eirslett/storybook-builder-vite#customize-vite-config
