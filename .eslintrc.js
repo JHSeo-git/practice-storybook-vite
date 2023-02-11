@@ -40,6 +40,15 @@ module.exports = {
     'simple-import-sort/exports': 'error',
     'simple-import-sort/imports': 'error',
     'tailwindcss/no-custom-classname': 'off',
+    '@typescript-eslint/ban-types': [
+      'error',
+      {
+        extendDefaults: true,
+        types: {
+          '{}': false,
+        },
+      },
+    ],
     '@typescript-eslint/consistent-type-imports': [
       'error',
       {
