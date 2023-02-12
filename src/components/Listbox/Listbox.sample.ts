@@ -1,10 +1,10 @@
 export const fruits = [
-  { value: 'apple', textValue: 'Apple' },
-  { value: 'orange', textValue: 'Orange' },
-  { value: 'banana', textValue: 'Banana' },
-  { value: 'pear', textValue: 'Pear' },
-  { value: 'grape', textValue: 'Grape', disabled: true },
-  { value: 'watermelon', textValue: 'Watermelon' },
+  { value: 'apple', textValue: 'Apple', emoji: '🍎' },
+  { value: 'orange', textValue: 'Orange', emoji: '🍊' },
+  { value: 'banana', textValue: 'Banana', emoji: '🍌' },
+  { value: 'pear', textValue: 'Pear', emoji: '🍐' },
+  { value: 'grape', textValue: 'Grape', emoji: '🍇', disabled: true },
+  { value: 'watermelon', textValue: 'Watermelon', emoji: '🍉' },
 ];
 
 export const vegitables = [

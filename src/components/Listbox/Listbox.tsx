@@ -139,10 +139,10 @@ const ListboxOption = React.forwardRef(function ListboxOption<TValue extends {}>
       {...props}
       ref={forwardedRef}
     >
-      <span className="min-w-0 truncate">{children}</span>
-      <span className="mui-check-icon shrink-0 items-center justify-center">
+      <div className="min-w-0 truncate">{children}</div>
+      <div className="mui-check-icon ml-2 shrink-0 items-center justify-center">
         <Check className="h-4 w-4" />
-      </span>
+      </div>
     </StyledOption>
   );
 });
@@ -163,7 +163,7 @@ const StyledOption = styled(OptionUnstyled)`
  * -----------------------------------------------------------------------------------------------*/
 
 const ListboxPopper = React.forwardRef(function ListboxPopper(
-  { children, className, ...props }: PopperUnstyledProps,
+  { children, className, ownerState, ...props }: PopperUnstyledProps,
   forwardedRef: React.ForwardedRef<HTMLDivElement>
 ) {
   return (
@@ -177,8 +177,13 @@ const ListboxPopper = React.forwardRef(function ListboxPopper(
  * Listbox
  * -----------------------------------------------------------------------------------------------*/
 
+interface ListboxProps<TValue extends {}>
+  extends Omit<SelectUnstyledProps<TValue>, 'listboxOpen' | 'onListboxOpenChange'> {
+  open?: SelectUnstyledProps<TValue>['listboxOpen'];
+  onOpenChange?: SelectUnstyledProps<TValue>['onListboxOpenChange'];
+}
 const Listbox = React.forwardRef(function Listbox<TValue extends {}>(
-  { ...props }: SelectUnstyledProps<TValue>,
+  { open, onOpenChange, ...props }: ListboxProps<TValue>,
   forwardedRef: React.ForwardedRef<HTMLButtonElement>
 ) {
   const slots: SelectUnstyledProps<TValue>['slots'] = {
@@ -193,6 +198,8 @@ const Listbox = React.forwardRef(function Listbox<TValue extends {}>(
         {...props}
         ref={forwardedRef}
         slots={slots}
+        listboxOpen={open}
+        onListboxOpenChange={onOpenChange}
         renderValue={(v): React.ReactNode => (
           <>
             {v?.value ? (
@@ -206,15 +213,20 @@ const Listbox = React.forwardRef(function Listbox<TValue extends {}>(
     </ListboxContextProvider>
   );
 }) as <TValue extends {}>(
-  props: SelectUnstyledProps<TValue> & React.RefAttributes<HTMLButtonElement>
+  props: ListboxProps<TValue> & React.RefAttributes<HTMLButtonElement>
 ) => JSX.Element;
 
 /* -------------------------------------------------------------------------------------------------
  * MultiListbox
  * -----------------------------------------------------------------------------------------------*/
 
+interface MultiListboxProps<TValue extends {}>
+  extends Omit<MultiSelectUnstyledProps<TValue>, 'listboxOpen' | 'onListboxOpenChange'> {
+  open?: MultiSelectUnstyledProps<TValue>['listboxOpen'];
+  onOpenChange?: MultiSelectUnstyledProps<TValue>['onListboxOpenChange'];
+}
 const MultiListbox = React.forwardRef(function MultiListbox<TValue extends {}>(
-  { ...props }: MultiSelectUnstyledProps<TValue>,
+  { open, onOpenChange, renderValue, ...props }: MultiListboxProps<TValue>,
   forwardedRef: React.ForwardedRef<HTMLButtonElement>
 ) {
   const slots: MultiSelectUnstyledProps<TValue>['slots'] = {
@@ -229,20 +241,37 @@ const MultiListbox = React.forwardRef(function MultiListbox<TValue extends {}>(
         {...props}
         ref={forwardedRef}
         slots={slots}
-        renderValue={(v): React.ReactNode => (
-          <>
-            {v?.length > 0 ? (
-              v.map((vv) => vv.label).join(', ')
-            ) : (
-              <span className="text-base-9">{props.placeholder || 'Select options'}</span>
-            )}
-          </>
-        )}
+        listboxOpen={open}
+        onListboxOpenChange={onOpenChange}
+        renderValue={(v): React.ReactNode => {
+          if (!v || v.length === 0) {
+            return <span className="text-base-9">{props.placeholder || 'Select options'}</span>;
+          }
+
+          const rendered = v.map((vv, index) => {
+            if (index === 0) {
+              return <div key={index}>{vv.label}</div>;
+            }
+
+            return (
+              <div key={index} className="flex items-center">
+                <span className="mx-0.5">·</span>
+                {vv.label}
+              </div>
+            );
+          });
+
+          return (
+            <div className="flex items-center space-x-1">
+              {renderValue ? renderValue(v) : rendered}
+            </div>
+          );
+        }}
       />
     </ListboxContextProvider>
   );
 }) as <TValue extends {}>(
-  props: MultiSelectUnstyledProps<TValue> & React.RefAttributes<HTMLButtonElement>
+  props: MultiListboxProps<TValue> & React.RefAttributes<HTMLButtonElement>
 ) => JSX.Element;
 
 export {
