@@ -194,12 +194,20 @@ const Listbox = React.forwardRef(function Listbox<TValue extends {}>(
         ref={forwardedRef}
         slots={slots}
         renderValue={(v): React.ReactNode => (
-          <>{v?.value ? v.label : props.placeholder || 'Select an option'}</>
+          <>
+            {v?.value ? (
+              v.label
+            ) : (
+              <span className="text-base-9">{props.placeholder || 'Select an option'}</span>
+            )}
+          </>
         )}
       />
     </ListboxContextProvider>
   );
-});
+}) as <TValue extends {}>(
+  props: SelectUnstyledProps<TValue> & React.RefAttributes<HTMLButtonElement>
+) => JSX.Element;
 
 /* -------------------------------------------------------------------------------------------------
  * MultiListbox
@@ -223,15 +231,19 @@ const MultiListbox = React.forwardRef(function MultiListbox<TValue extends {}>(
         slots={slots}
         renderValue={(v): React.ReactNode => (
           <>
-            {v?.length > 0
-              ? v.map((vv) => vv.label).join(', ')
-              : props.placeholder || 'Select options'}
+            {v?.length > 0 ? (
+              v.map((vv) => vv.label).join(', ')
+            ) : (
+              <span className="text-base-9">{props.placeholder || 'Select options'}</span>
+            )}
           </>
         )}
       />
     </ListboxContextProvider>
   );
-});
+}) as <TValue extends {}>(
+  props: MultiSelectUnstyledProps<TValue> & React.RefAttributes<HTMLButtonElement>
+) => JSX.Element;
 
 export {
   //
