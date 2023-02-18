@@ -72,7 +72,7 @@ const ListboxTrigger = React.forwardRef(function ListboxTrigger<TValue extends {
     }
 
     context.setWidth(buttonRef.current.getBoundingClientRect().width);
-  }, [buttonRef]);
+  }, [buttonRef, context]);
 
   return (
     <button
@@ -250,22 +250,18 @@ const MultiListbox = React.forwardRef(function MultiListbox<TValue extends {}>(
 
           const rendered = v.map((vv, index) => {
             if (index === 0) {
-              return <div key={index}>{vv.label}</div>;
+              return <>{vv.label}</>;
             }
 
             return (
-              <div key={index} className="flex items-center">
+              <>
                 <span className="mx-0.5">·</span>
                 {vv.label}
-              </div>
+              </>
             );
           });
 
-          return (
-            <div className="flex items-center space-x-1">
-              {renderValue ? renderValue(v) : rendered}
-            </div>
-          );
+          return <div className="flex items-center">{renderValue ? renderValue(v) : rendered}</div>;
         }}
       />
     </ListboxContextProvider>

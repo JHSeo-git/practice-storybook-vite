@@ -1,7 +1,7 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { StoryContainer } from '../__storybook/StoryContainer';
-import { Calendar, DatePicker, DatePickerBaseInput, DatePickerContent } from './DatePicker';
+import { DatePicker } from './DatePicker';
 
 export default {
   title: 'Components/DatePicker',
@@ -12,26 +12,15 @@ export default {
 export const Template: ComponentStory<typeof DatePicker> = (args) => {
   return (
     <StoryContainer>
-      <DatePicker
-        {...args}
-        config={{
-          locale: {
-            weekday: 'short',
-            monthName: '2-digit',
-          },
-        }}
-      >
-        <div className="relative">
-          <DatePickerBaseInput />
-        </div>
-        <DatePickerContent>
-          <Calendar />
-        </DatePickerContent>
-      </DatePicker>
+      <DatePicker style={{ width: '300px' }} {...args} />
     </StoryContainer>
   );
 };
 Template.args = {
-  defaultOpen: true,
+  config: {
+    dates: {
+      mode: 'range',
+    },
+  },
 };
-Template.storyName = 'Default';
+Template.storyName = 'DateRangePicker';
