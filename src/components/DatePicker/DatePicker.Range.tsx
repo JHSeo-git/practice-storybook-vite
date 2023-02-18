@@ -1,32 +1,52 @@
-import * as RehookifyDatepicker from '@rehookify/datepicker';
+import type { DatePickerUserConfig, DPState } from '@rehookify/datepicker';
+import {
+  useCalendars,
+  useDatePickerState,
+  useDaysPropGetters,
+  useMonthsActions,
+  useMonthsPropGetters,
+} from '@rehookify/datepicker';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import * as React from 'react';
 
 import { Button } from '../Button';
 import { CalendarCellButton } from './DatePicker.Base';
+import { getNumericText } from './DatePicker.utils';
+import { useDatePickerContext } from './DatePickerContext';
 
-interface CalendarRootProps {
-  config: RehookifyDatepicker.DatePickerUserConfig;
+interface CalendarRangeRootProps {
+  config: DatePickerUserConfig;
   onConfirm: () => void;
 }
-export const CalendarRangeRoot = ({ config, onConfirm }: CalendarRootProps) => {
-  const startDpState = RehookifyDatepicker.useDatePickerState(config);
-  const endDpState = RehookifyDatepicker.useDatePickerState(config);
+export const CalendarRangeRoot = ({ config, onConfirm }: CalendarRangeRootProps) => {
+  const startDpState = useDatePickerState(config);
+  const endDpState = useDatePickerState(config);
 
-  const { setMonth: startSetMonth } = RehookifyDatepicker.useMonthsActions(startDpState);
-  const { setMonth: endSetMonth } = RehookifyDatepicker.useMonthsActions(endDpState);
+  const { setMonth: startSetMonth } = useMonthsActions(startDpState);
+  const { setMonth: endSetMonth } = useMonthsActions(endDpState);
 
-  const onTodayClick = () => {
+  const onTodayClick = React.useCallback(() => {
     const today = new Date();
+
     startSetMonth(today);
     endSetMonth(today);
-  };
+  }, [startSetMonth, endSetMonth]);
 
   return (
     <div>
       <div className="flex space-x-5">
-        <CalendarRange startDpState={startDpState} endDpState={endDpState} range="start" />
-        <CalendarRange startDpState={startDpState} endDpState={endDpState} range="end" />
+        <CalendarRange
+          startDpState={startDpState}
+          endDpState={endDpState}
+          range="start"
+          onConfirm={onConfirm}
+        />
+        <CalendarRange
+          startDpState={startDpState}
+          endDpState={endDpState}
+          range="end"
+          onConfirm={onConfirm}
+        />
       </div>
       <div className="mt-5 flex items-center justify-between">
         <Button size="small" onClick={onTodayClick}>
@@ -41,24 +61,41 @@ export const CalendarRangeRoot = ({ config, onConfirm }: CalendarRootProps) => {
 };
 
 interface CalendarRangeProps {
-  startDpState: RehookifyDatepicker.DPState;
-  endDpState: RehookifyDatepicker.DPState;
+  startDpState: DPState;
+  endDpState: DPState;
   range: 'start' | 'end';
+  onConfirm: () => void;
 }
-const CalendarRange = ({ startDpState, endDpState, range }: CalendarRangeProps) => {
-  const targetDpState = range === 'start' ? startDpState : endDpState;
-  const { calendars, weekDays } = RehookifyDatepicker.useCalendars(targetDpState);
-  const { previousMonthButton, nextMonthButton } =
-    RehookifyDatepicker.useMonthsPropGetters(targetDpState);
+const CalendarRange = ({ startDpState, endDpState, range, onConfirm }: CalendarRangeProps) => {
+  const targetDpState = React.useMemo(
+    () => (range === 'start' ? startDpState : endDpState),
+    [startDpState, endDpState, range]
+  );
 
-  const { setMonth } = RehookifyDatepicker.useMonthsActions(targetDpState);
+  const { calendars, weekDays } = useCalendars(targetDpState);
+  const { previousMonthButton, nextMonthButton } = useMonthsPropGetters(targetDpState);
+  const { autoClose } = useDatePickerContext();
 
-  const { dayButton } = RehookifyDatepicker.useDaysPropGetters(targetDpState);
+  const { setMonth } = useMonthsActions(targetDpState);
 
-  const onDayButtonHover = (d: Date) => {
-    const target = range === 'start' ? endDpState : startDpState;
-    target.dispatch({ type: 'SET_RANGE_END', date: d });
-  };
+  const { dayButton } = useDaysPropGetters(targetDpState);
+
+  const onDayButtonHover = React.useCallback(
+    (d: Date) => {
+      const target = range === 'start' ? endDpState : startDpState;
+      target.dispatch({ type: 'SET_RANGE_END', date: d });
+    },
+    [startDpState, endDpState, range]
+  );
+
+  const onDayClick = React.useCallback(() => {
+    // we have to check before the dispatch because the dispatch will trigger a re-render
+    const isAllSelected = targetDpState.selectedDates.length === 1;
+
+    if (isAllSelected && autoClose) {
+      onConfirm();
+    }
+  }, [targetDpState, autoClose, onConfirm]);
 
   const calendar = calendars[0];
   const { days, month, year } = calendar;
@@ -112,9 +149,9 @@ const CalendarRange = ({ startDpState, endDpState, range }: CalendarRangeProps) 
             data-current-month={d.inCurrentMonth}
             onMouseEnter={() => onDayButtonHover(d.$date)}
             onMouseOver={() => onDayButtonHover(d.$date)}
-            {...dayButton(d)}
+            {...dayButton(d, { onClick: onDayClick })}
           >
-            {d.day}
+            {getNumericText(d.day)}
           </CalendarCellButton>
         ))}
       </div>

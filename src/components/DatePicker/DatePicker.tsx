@@ -1,4 +1,4 @@
-import type * as RehookifyDatepicker from '@rehookify/datepicker';
+import type { DatePickerUserConfig, DatesUserConfig } from '@rehookify/datepicker';
 import * as React from 'react';
 import useOnClickOutside from 'use-onclickoutside';
 
@@ -6,11 +6,15 @@ import { useControllableState } from '@/hooks/useControllableState';
 
 import { DatePickerInput } from './DatePicker.Base';
 import { CalendarRangeRoot } from './DatePicker.Range';
+import { CalendarSingleRoot } from './DatePicker.Single';
 import {
   DEFAULT_DATE_FORMAT,
   getFormattedDate,
   getParsedDatesWithCharachter,
 } from './DatePicker.utils';
+import { DatePickerContextProvider } from './DatePickerContext';
+
+const charachter = ' ~ ';
 
 interface DatePickerProps
   extends Omit<React.ComponentPropsWithoutRef<typeof DatePickerInput>, 'value' | 'onTriggerClick'> {
@@ -18,18 +22,23 @@ interface DatePickerProps
 
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
+  onConfirm?: () => void;
+  autoClose?: boolean;
 
-  selectedDates?: RehookifyDatepicker.DatePickerUserConfig['selectedDates'];
-  onDatesChange?: RehookifyDatepicker.DatePickerUserConfig['onDatesChange'];
+  selectedDates?: DatePickerUserConfig['selectedDates'];
+  onDatesChange?: DatePickerUserConfig['onDatesChange'];
 
   value?: string;
   onValueChange?: (value: string) => void;
 
   dateFormat?: string;
 
-  config?: Omit<RehookifyDatepicker.DatePickerUserConfig, 'selectedDates' | 'onDatesChange'>;
+  mode?: DatesUserConfig['mode'];
+  localeConfig?: DatePickerUserConfig['locale'];
+  calendarConfig?: DatePickerUserConfig['calendar'];
+  yearsConfig?: DatePickerUserConfig['years'];
+  datesConfig?: Omit<DatePickerUserConfig['dates'], 'mode'>;
 }
-const charachter = ' ~ ';
 export const DatePicker = React.forwardRef<
   React.ElementRef<typeof DatePickerInput>,
   DatePickerProps
@@ -40,6 +49,8 @@ export const DatePicker = React.forwardRef<
 
       open: propOpen,
       onOpenChange: propOnOpenChange,
+      onConfirm: propOnConfirm,
+      autoClose = true,
 
       value: propValue,
       onValueChange: propOnValueChange,
@@ -49,9 +60,13 @@ export const DatePicker = React.forwardRef<
 
       dateFormat = DEFAULT_DATE_FORMAT,
 
-      onChange,
+      onChange: propOnChange,
 
-      config: propConfig,
+      mode = 'single',
+      localeConfig,
+      calendarConfig,
+      yearsConfig,
+      datesConfig,
 
       placeholder: propPlaceholder,
       ...props
@@ -62,48 +77,67 @@ export const DatePicker = React.forwardRef<
       prop: propOpen,
       onChange: propOnOpenChange,
     });
-
     const [selectedDates = [], setSelectedDates] = useControllableState({
       prop: propSelectedDates,
       onChange: propOnDatesChange,
     });
-
     const [value = '', setValue] = useControllableState({
       prop: propValue,
       onChange: propOnValueChange,
     });
 
-    const popoverRef = React.useRef<HTMLDivElement>(null);
-    useOnClickOutside(popoverRef, () => setOpen(false));
-
     const onDatesChange = React.useCallback(
-      (dates: RehookifyDatepicker.DatePickerUserConfig['selectedDates']) => {
+      (dates: DatePickerUserConfig['selectedDates']) => {
         setSelectedDates(dates);
         setValue(dates?.map((date) => getFormattedDate({ date })).join(charachter) || '');
       },
       [setSelectedDates, setValue]
     );
+    const onChange = React.useCallback(
+      (e: React.ChangeEvent<HTMLInputElement>) => {
+        propOnChange?.(e);
+        setValue(e.target.value);
+      },
+      [propOnChange, setValue]
+    );
+    const onConfirm = React.useCallback(() => {
+      setOpen(false);
+      propOnConfirm?.();
+    }, [setOpen, propOnConfirm]);
 
     const placeholder = React.useMemo(() => {
       if (propPlaceholder) {
         return propPlaceholder;
       }
-      return `${DEFAULT_DATE_FORMAT.toUpperCase()}${charachter}${DEFAULT_DATE_FORMAT.toUpperCase()}`;
-    }, [propPlaceholder]);
 
-    const config: RehookifyDatepicker.DatePickerUserConfig = React.useMemo(
+      if (mode === 'single') {
+        return DEFAULT_DATE_FORMAT.toUpperCase();
+      }
+
+      return `${DEFAULT_DATE_FORMAT.toUpperCase()}${charachter}${DEFAULT_DATE_FORMAT.toUpperCase()}`;
+    }, [propPlaceholder, mode]);
+    const config: DatePickerUserConfig = React.useMemo(
       () => ({
-        ...propConfig,
         selectedDates,
         onDatesChange,
         locale: {
           monthName: '2-digit',
           weekday: 'short',
-          ...propConfig?.locale,
+          locale: 'KR',
+          ...localeConfig,
+        },
+        calendar: calendarConfig,
+        years: yearsConfig,
+        dates: {
+          mode,
+          ...datesConfig,
         },
       }),
-      [propConfig, selectedDates, onDatesChange]
+      [selectedDates, onDatesChange, mode, localeConfig, calendarConfig, yearsConfig, datesConfig]
     );
+
+    const popoverRef = React.useRef<HTMLDivElement>(null);
+    useOnClickOutside(popoverRef, () => setOpen(false));
 
     React.useEffect(() => {
       if (!open) {
@@ -123,24 +157,22 @@ export const DatePicker = React.forwardRef<
     }, [open, setSelectedDates, value, dateFormat]);
 
     return (
-      <div className="relative">
-        <DatePickerInput
-          ref={forwardedRef}
-          className={className}
-          value={value}
-          onChange={(e) => {
-            onChange?.(e);
-
-            setValue(e.target.value);
-          }}
-          onTriggerClick={() => setOpen((prev) => !prev)}
-          placeholder={placeholder}
-          {...props}
-        />
-        <CalendarPopover ref={popoverRef} open={open}>
-          <Calendar config={config} onConfirm={() => setOpen(false)} />
-        </CalendarPopover>
-      </div>
+      <DatePickerContextProvider autoClose={autoClose}>
+        <div className="relative">
+          <DatePickerInput
+            ref={forwardedRef}
+            className={className}
+            value={value}
+            onChange={onChange}
+            onTriggerClick={() => setOpen((prev) => !prev)}
+            placeholder={placeholder}
+            {...props}
+          />
+          <CalendarPopover ref={popoverRef} open={open}>
+            <Calendar mode={mode} config={config} onConfirm={onConfirm} />
+          </CalendarPopover>
+        </div>
+      </DatePickerContextProvider>
     );
   }
 );
@@ -169,9 +201,15 @@ const CalendarPopover = React.forwardRef<HTMLDivElement, CalendarPopoverProps>(
 CalendarPopover.displayName = 'CalendarPopover';
 
 interface CalendarProps {
-  config: RehookifyDatepicker.DatePickerUserConfig;
+  mode: DatesUserConfig['mode'];
+  config: DatePickerUserConfig;
   onConfirm: () => void;
 }
-const Calendar = ({ config, onConfirm }: CalendarProps) => {
-  return <CalendarRangeRoot config={config} onConfirm={onConfirm} />;
+const Calendar = ({ mode, config, onConfirm }: CalendarProps) => {
+  return (
+    <>
+      {mode === 'single' && <CalendarSingleRoot config={config} onConfirm={onConfirm} />}
+      {mode === 'range' && <CalendarRangeRoot config={config} onConfirm={onConfirm} />}
+    </>
+  );
 };

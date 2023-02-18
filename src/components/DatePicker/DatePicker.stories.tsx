@@ -9,18 +9,26 @@ export default {
   subcomponents: {},
 } as ComponentMeta<typeof DatePicker>;
 
-export const Template: ComponentStory<typeof DatePicker> = (args) => {
+export const SingleTemplate: ComponentStory<typeof DatePicker> = (args) => {
+  return (
+    <StoryContainer>
+      <DatePicker style={{ width: '200px' }} {...args} />
+    </StoryContainer>
+  );
+};
+SingleTemplate.args = {
+  mode: 'single',
+};
+SingleTemplate.storyName = 'DatePicker';
+
+export const RangeTemplate: ComponentStory<typeof DatePicker> = (args) => {
   return (
     <StoryContainer>
       <DatePicker style={{ width: '300px' }} {...args} />
     </StoryContainer>
   );
 };
-Template.args = {
-  config: {
-    dates: {
-      mode: 'range',
-    },
-  },
+RangeTemplate.args = {
+  mode: 'range',
 };
-Template.storyName = 'DateRangePicker';
+RangeTemplate.storyName = 'DateRangePicker';

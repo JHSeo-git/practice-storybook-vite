@@ -52,3 +52,7 @@ export function getParsedDatesWithCharachter({
     .filter(Boolean)
     .sort(compareAsc);
 }
+
+export function getNumericText(text: string) {
+  return text.replace(/\D/g, '');
+}
