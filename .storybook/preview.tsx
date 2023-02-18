@@ -3,6 +3,8 @@ import { themes } from '@storybook/theming';
 import { DocsContainer } from '@storybook/addon-docs';
 import { lightTheme, darkTheme } from './theme';
 
+import 'tailwindcss/tailwind.css';
+
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {

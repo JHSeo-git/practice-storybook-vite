@@ -10,7 +10,7 @@ module.exports = {
     //
     './index.html',
     './src/**/*.{js,jsx,ts,tsx}',
-    '.storybook/**/*.{js,jsx,ts,tsx,html}',
+    './.storybook/**/*.{js,jsx,ts,tsx,html}',
   ],
   darkMode: ['class'],
   theme: {

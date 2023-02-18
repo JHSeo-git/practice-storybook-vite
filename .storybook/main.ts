@@ -15,6 +15,14 @@ const config: StorybookViteConfig = {
     '@storybook/addon-storysource',
     '@storybook/addon-a11y',
     'storybook-dark-mode',
+    {
+      name: '@storybook/addon-postcss',
+      options: {
+        postcssLoaderOptions: {
+          implementation: require('postcss'),
+        },
+      },
+    },
   ],
   framework: '@storybook/react',
   core: {
