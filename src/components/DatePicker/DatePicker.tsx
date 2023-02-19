@@ -157,7 +157,7 @@ export const DatePicker = React.forwardRef<
     }, [open, setSelectedDates, value, dateFormat]);
 
     return (
-      <DatePickerContextProvider autoClose={autoClose}>
+      <DatePickerContextProvider autoClose={autoClose} onConfirm={onConfirm}>
         <div className="relative">
           <DatePickerInput
             ref={forwardedRef}
@@ -169,7 +169,7 @@ export const DatePicker = React.forwardRef<
             {...props}
           />
           <CalendarPopover ref={popoverRef} open={open}>
-            <Calendar mode={mode} config={config} onConfirm={onConfirm} />
+            <Calendar mode={mode} config={config} />
           </CalendarPopover>
         </div>
       </DatePickerContextProvider>
@@ -203,13 +203,12 @@ CalendarPopover.displayName = 'CalendarPopover';
 interface CalendarProps {
   mode: DatesUserConfig['mode'];
   config: DatePickerUserConfig;
-  onConfirm: () => void;
 }
-const Calendar = ({ mode, config, onConfirm }: CalendarProps) => {
+const Calendar = ({ mode, config }: CalendarProps) => {
   return (
     <>
-      {mode === 'single' && <CalendarSingleRoot config={config} onConfirm={onConfirm} />}
-      {mode === 'range' && <CalendarRangeRoot config={config} onConfirm={onConfirm} />}
+      {mode === 'single' && <CalendarSingleRoot config={config} />}
+      {mode === 'range' && <CalendarRangeRoot config={config} />}
     </>
   );
 };

@@ -71,7 +71,7 @@
     "@radix-ui/react-use-controllable-state": "^1.0.0",
     "@radix-ui/react-use-previous": "^1.0.0",
     "@radix-ui/react-visually-hidden": "^1.0.1",
-    "@rehookify/datepicker": "^4.0.0",
+    "@rehookify/datepicker": "^4.3.1",
     "@storybook/addon-a11y": "^6.5.16",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",

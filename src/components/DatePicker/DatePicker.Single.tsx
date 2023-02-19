@@ -1,20 +1,24 @@
 import type { DatePickerUserConfig, DPState } from '@rehookify/datepicker';
 import { useDaysPropGetters } from '@rehookify/datepicker';
-import { useCalendars, useMonthsPropGetters } from '@rehookify/datepicker';
+import { useCalendars } from '@rehookify/datepicker';
 import { useDatePickerState, useMonthsActions } from '@rehookify/datepicker';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import * as React from 'react';
 
 import { Button } from '../Button';
-import { CalendarCellButton } from './DatePicker.Base';
+import {
+  CalendarCellButton,
+  CalendarHeader,
+  CalendarMonths,
+  CalendarYears,
+} from './DatePicker.Base';
 import { getNumericText } from './DatePicker.utils';
-import { useDatePickerContext } from './DatePickerContext';
+import { useCalendarViewMode, useDatePickerContext } from './DatePickerContext';
 
 interface CalendarSingleRootProps {
   config: DatePickerUserConfig;
-  onConfirm: () => void;
 }
-export const CalendarSingleRoot = ({ config, onConfirm }: CalendarSingleRootProps) => {
+export const CalendarSingleRoot = ({ config }: CalendarSingleRootProps) => {
+  const { onConfirm } = useDatePickerContext();
   const dpState = useDatePickerState(config);
 
   const { setMonth } = useMonthsActions(dpState);
@@ -28,7 +32,7 @@ export const CalendarSingleRoot = ({ config, onConfirm }: CalendarSingleRootProp
   return (
     <div>
       <div>
-        <CalendarSingle dpState={dpState} onConfirm={onConfirm} />
+        <CalendarSingle dpState={dpState} />
       </div>
       <div className="mt-5 flex items-center justify-between">
         <Button size="small" onClick={onTodayClick}>
@@ -44,41 +48,47 @@ export const CalendarSingleRoot = ({ config, onConfirm }: CalendarSingleRootProp
 
 interface CalendarSingleProps {
   dpState: DPState;
-  onConfirm: () => void;
 }
-const CalendarSingle = ({ dpState, onConfirm }: CalendarSingleProps) => {
+const CalendarSingle = ({ dpState }: CalendarSingleProps) => {
+  const [calendarViewMode, setCalendarViewMode] = useCalendarViewMode();
+
+  return (
+    <div>
+      <CalendarHeader
+        dpState={dpState}
+        calendarViewMode={calendarViewMode}
+        setCalendarViewMode={setCalendarViewMode}
+      />
+      <div className="mt-2">
+        {calendarViewMode === 'days' && <CalendarDays dpState={dpState} />}
+        {calendarViewMode === 'months' && (
+          <CalendarMonths dpState={dpState} setCalendarViewMode={setCalendarViewMode} />
+        )}
+        {calendarViewMode === 'years' && (
+          <CalendarYears dpState={dpState} setCalendarViewMode={setCalendarViewMode} />
+        )}
+      </div>
+    </div>
+  );
+};
+
+const CalendarDays = ({ dpState }: { dpState: DPState }) => {
+  const { autoClose, onConfirm } = useDatePickerContext();
   const { calendars, weekDays } = useCalendars(dpState);
-  const { previousMonthButton, nextMonthButton } = useMonthsPropGetters(dpState);
-  const { autoClose } = useDatePickerContext();
 
   const { dayButton } = useDaysPropGetters(dpState);
 
   const calendar = calendars[0];
-  const { year, month, days } = calendar;
+  const { days } = calendar;
 
   const onDayClick = React.useCallback(() => {
     if (autoClose) {
-      onConfirm();
+      onConfirm?.();
     }
   }, [autoClose, onConfirm]);
 
   return (
-    <div>
-      <div className="flex items-center justify-between">
-        <div>
-          <CalendarCellButton {...previousMonthButton()}>
-            <ChevronLeft className="h-4 w-4" />
-          </CalendarCellButton>
-        </div>
-        <div>
-          {year} / {month}
-        </div>
-        <div>
-          <CalendarCellButton {...nextMonthButton()}>
-            <ChevronRight className="h-4 w-4" />
-          </CalendarCellButton>
-        </div>
-      </div>
+    <>
       <div className="grid grid-cols-[repeat(7,_1fr)] items-center gap-1">
         {weekDays.map((d) => (
           <div
@@ -105,6 +115,6 @@ const CalendarSingle = ({ dpState, onConfirm }: CalendarSingleProps) => {
           </CalendarCellButton>
         ))}
       </div>
-    </div>
+    </>
   );
 };

@@ -8,7 +8,7 @@ export default {
   component: Demo,
 } as ComponentMeta<typeof Demo>;
 
-export const Template: ComponentStory<typeof Demo> = (args) => {
+export const Template: ComponentStory<typeof Demo> = () => {
   return (
     <StoryContainer>
       <div className="w-[180px]">
